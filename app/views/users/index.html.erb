@@ -1,0 +1,43 @@
+<h1>Active Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th></th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% flag = false %>
+    <% @users.each do |user| %>
+      <% @stories.each do |story| %>
+        <% if user.id == story.user_id || user.id == story.user2id %>
+         <% flag = true %>
+       <% end %>
+     <% end %>
+     <% if flag == true %>
+       <tr>
+          <td><%= link_to user.name, user %></td>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            <% if user.loggedin == 1 %>
+              Online 
+            <% else %>
+              Offline   
+            <% end %></td>
+          <td></td>
+        </tr>
+     <% end %>
+     <% flag = false %>
+   <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>

@@ -1,0 +1,11 @@
+<div class="feedsentence" data-story-id="<%=@story.id %>" data-feed-item-created-at="<%=feed_item.created_at %>" data-feed-item-id="<%=feed_item.id %>" data-feed-item-content="<%=feed_item.content %>" >
+  <li id="<%= feed_item.id %>">
+     <table>
+  	  <tr>
+        <td width="75%"> <%= feed_item.content %> </td>
+        <td width "10%"%>  </td>
+    	  <td width="25%"> <%= link_to feed_item.user.name, feed_item.user %> - <%= time_ago_in_words(feed_item.created_at) %> ago </td>
+      </tr>
+    </table>
+  </li>
+</div>

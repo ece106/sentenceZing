@@ -1,0 +1,38 @@
+<p>Join others in a new interactive and fun way to create a short story with a partner.<br/> Make a story or join an existing one 
+        to find a partner to get started! <br/> Read other user's stories and vote on your favorites to make them the top story of the week!
+        <br/> Your imagination is the only limit! </p>
+        <br/>
+        
+        
+<% if signed_in? %>
+  <div class="row">
+  	<%= link_to "Learn How to Play!", howtoplay_path, class: "btn btn-large" %>
+  	&nbsp;
+    <%= link_to "Start a Story!", new_story_path, class: "btn btn-large" %>
+    &nbsp;
+    <%= link_to "Join or Read a Story!", stories_path, class: "btn btn-large" %>
+  </div>
+<% else %>
+  <div class="center hero-unit">
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-large" %>
+    <%= link_to "Sign in!", signin_path, class: "btn btn-large" %>
+  </div>
+<% end %>
+
+    <script id="sid0020000058590817580">(function() {function async_load(){s.id="cid0020000058590817580";s.src='http://st.chatango.com/js/gz/emb.js';s.style.cssText="width:200px;height:300px;";s.async=true;s.text='{"handle":"sentencezing","arch":"js","styles":{"a":"CC0000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"CC0000","l":"CC0000","m":"CC0000","n":"FFFFFF","q":"CC0000","r":100,"pos":"bl","cv":1,"cvfntsz":"20px","cvbg":"CC0000","cvw":123,"cvh":45}}';var ss = document.getElementsByTagName('script');for (var i=0, l=ss.length; i < l; i++){if (ss[i].id=='sid0020000058590817580'){ss[i].id +='_';ss[i].parentNode.insertBefore(s, ss[i]);break;}}}var s=document.createElement('script');if (s.async==undefined){if (window.addEventListener) {addEventListener('load',async_load,false);}else if (window.attachEvent) {attachEvent('onload',async_load);}}else {async_load();}})();</script>
+
+
+<br/><br/>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like-box" data-href="https://www.facebook.com/sentencezing" data-width="500" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true" ></div>
+
+<br/><br/><br/>

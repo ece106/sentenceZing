@@ -1,0 +1,28 @@
+Suggestions that we got from our "Potential Early-Adopters"
+
+Suggestion 1:
+Able to see the profile picture of the other user while crafting the story I guess something similiar to the Skype IM. Use the Skype app for windows 8 as a good example.
+
+
+Suggesiton 2:
+On the home page, make the description of the game with a bigger font size. Put the "tutorial" and "How do you play" button on the homepage. The reason why is because we got comments from a couple of the early adopters that they do not know what the purpose of the game about. So this way, they have a sense of what they are getting into.
+
+Suggestion 3:
+On the footer and header, make the links stand out a lot more. Make the Links white to stick out from the black.
+
+Suggestion 4:
+Have the ability of 2 or more people to be in the story at the same time.
+
+Suggestion 5:
+Make the textbox bigger and the have warning message saying that "you are about to hit the limit" .
+
+Suggestion 6:
+Have a team matchup. People can be in teams and they compete for prizes based on pointage. The prizes could be groupons, coupons for pizza, etc.
+
+Suggeestion 7:
+Have the page refresh automatically after you add to the story.
+
+Suggestion 8:
+Get notifications to see which user has added to the story that you have created. It will have the user's profile pic with it too. All of this activity will be after the user login with their credentials. Somthing similiar to LinkedIn.
+
+ 

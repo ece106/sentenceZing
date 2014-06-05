@@ -1,0 +1,20 @@
+<center> 
+  <div class="storyshow" data-story-id="<%=@story.id %>" >
+    <h1><%= @story.title %></h1>
+    <h2><%= @story.category %></h2>
+    by <%= User.find(@story.user_id).name %> and <%= User.find(@story.user2id).name %>
+    <br/><br/>
+  
+    <% if @story.microposts.any? %>
+      <%= render 'shared/feed' %>
+    <% end %>
+  
+    <br/>
+    <% @like = @story.likes.build %>
+    <% @story = @story.id %>
+    <%= render 'shared/likes_form' %>
+  
+    <br/> <br/>
+  </div>
+</center>
+ 

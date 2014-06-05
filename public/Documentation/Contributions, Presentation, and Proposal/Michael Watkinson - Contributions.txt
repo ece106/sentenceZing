@@ -1,0 +1,119 @@
+Came up with initial idea, proposal, and powerpoint
+Created the Page Flow and App Data diagrams
+Created the work division for each person to be in charge of page flow elements
+Created Test Cases and test case ideas
+Added 3 new pages (contact_us.html, voting.html, and account.html)
+Changed CSS to match the page flow diagram
+Made the navigation section functional
+Moved the about us section to the about_us.html page
+
+Week of JANUARY 18, 2014
+Created a Facebook, Twitter, Gmail, and Paypal account for SentenceZing
+Added Logos and links to these accounts on the Contact Us page
+Created validation for Users for email and password 
+Created validation for Microposts for sentence length
+Rolled back git and helped restore files after the “catastrophe”
+Added template to application.html.erb and and content to about and contactus .html.erb pages 
+
+Week of JANUARY 25, 2014
+Completed listings 7.3, 7.5, 7.14, 7.15, 7.17
+Created text files for contributions for whole team and pushed to github
+Comepleted listings 7.18-7.25
+Helped fix multiple application errors
+
+Week of MARCH 6, 2014 and MARCH 11, 2014
+Removed duplicate template problem
+Fixed route file
+Hartl Listings 8.2, 8.7, 8.13, 8.18, 8.22, 8.23, 8.24, 8.27, 8.29, 8.30
+updated user validation methods
+Listing 9.2, 9.3, 9.7, 9.14, 9.15, 9.17
+
+Week of MARCH 18, 2014
+Fixed page formatting: sign up,
+Fixed error preventing sign up for new users
+A lot of UI changes to css pages. Added a header and footer
+Added a favicon and logo
+Hartl Chapter 10
+Revised schema and added name, password, and permalink fields
+Added header
+Added microposts to stories pages 
+Removed user_stories controller, model, pages, and helper
+Added aboutme field to user db table and added into the user show and edit pages
+Made formatting changes to user pages
+Added new story and voting page links to header for signed in users
+Changed order for displaying microposts from DESC to ASC
+Removed editing story title and category
+Displays title of Story and Category at the top of story edit page
+Formatted the microposts on story edit page in a table with the user and time since posted
+
+Week of MARCH 25th, 2014
+Made list of early adopters, test plan, and draft of survey questions
+Created a survey on surveymonkey
+Contacted early adopters
+Added survey page, test plan, removed delete link for stories, and made UI changes
+Made early adopter schedule, conclusions, survey results, and next step plan
+Created validation for Micropost length
+Added JavaScript to count how many characters left in a micropost
+
+Week of April 1st, 2014
+Added a Donations Page with Paypal link
+Added validation so that only two users who are part of the story can edit the page
+Created a Join Story button on index page
+Added useful links to the home page
+Fixed the footer format
+Changed header and footer to resize with page width
+
+Week of April 8th. 2014
+Added Refresh button
+Allow users to only post on their turn
+
+Week of April 15th, 2014
+Added chat box
+Updated survey results, early adopter feedback, and next steps
+Added ability for users to upload a baner/cover photo
+Made changes to format of user show page
+Changed format of the user edit page
+Change user show page to show names of the stories they are a part of and link to them instead of showing random sentences
+Added banner to database, usercontroller, and user model
+
+Week of April 22nd, 2014
+Fixed show page to only attempt to display if user pictures if image and banner have been set
+Fixed the turn system for microposts
+Fixed dimensions of profile picture and banner image
+Changed user index to only display active users
+Reformatted user profile pages
+Hartl Listing 11.1, 11.6, 11.10, 11.14, 11.18, 11.20-11.45
+Reformatted user profile page and followers/following pages
+Added a default banner and default profile picture
+Worked on Research Funding report and Research funding Presentation
+
+Week of April 29th, 2014
+Updated Next Steps schedule
+Wrote Final Exam Proposal
+Created notification functionality
+Made index page for notification feed - displays for user, people they are following, and for stories they are part of
+Notifications for creating story, joining story, and adding to a story
+
+Week of May 6th, 2014
+Dropped Stories_Users table from schema
+Created Like functionality for stories
+Added voting page
+Added in shadowbox feature for voting page
+Made user name and story title unique
+Added displaying count of number of likes for story
+Fixed like validation and removed redirect on like
+
+Week of May 20th, 2014
+Added unlike feature for voting
+Added JS to switch between like and unlike button
+Added JS to update like count
+Added a note to refresh page to see survey on the survey page
+Added voting, title, category, and authors to the story show page 
+
+Week of June 3rd, 2014
+Worked on Contact Us Page
+Drafted new Sentencezing email
+Moved like button to story show page
+Moved like form to story show page
+Set link in header to voting page to disable turbolink so shadowbox works
+Attended SCORE advisor meeting

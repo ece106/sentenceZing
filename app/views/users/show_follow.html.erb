@@ -1,0 +1,83 @@
+<% provide(:title, @title) %>
+<div class="row">
+  <aside class="span4">
+    <div class="profilePicture" style="width:300px;height:300px;float:left;overflow:hidden">
+      <% if @user.image.present? && @user.image != "" %>
+        <%= image_tag(@user.image, :size => "250x250") %> 
+      <% else %>
+        <%= image_tag "default_profile.jpg", :size => "250x250" %>
+      <% end %>
+    </div>
+    <div class="userInfo" style="width:25%;float:left">
+  	<br/>
+  	<table>
+      <tr>
+        <td> <h2> <strong>Username: </strong> </h2> </td>
+        <td> &nbsp;&nbsp; </td>
+        <td> <h2> <%= @user.name %> </h2> </td>
+      </tr>
+      <tr>
+      	<td> <h2> <strong>Status: </strong> </h2> </td>
+      	<td> &nbsp;&nbsp; </td>
+        <td> 
+      	  <% if @user.loggedin == 1 %>
+            <h2> Online </h2>
+          <% else %>
+            <h2> Offline </h2>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td> <h2><strong>SentenceZings:</strong></h2> </td>
+        <td> &nbsp;&nbsp; </td>
+        <td> <h2><%= @user.microposts.count %></h2> </td>
+      </tr>
+      <tr>
+        <td>
+          <h2> <a href="<%= following_user_path(@user) %>">
+            <strong id="following" class="stat">
+              <%= @user.followed_users.count %>
+            </strong>
+            following
+          </a> </h2>
+        </td>
+        <td> &nbsp;&nbsp; </td>
+        <td>
+          <h2> <a href="<%= followers_user_path(@user) %>">
+            <strong id="followers" class="stat">
+              <%= @user.followers.count %>
+            </strong>
+            followers
+          </h2> </a>
+        </td>
+      </tr>
+      <tr>
+        <td> <h2> <%= link_to "view my profile", @user %> </h2> </td>
+        <td> &nbsp;&nbsp; </td>
+        <td> &nbsp;&nbsp;&nbsp;&nbsp; </td>
+      </tr>
+    </table>
+    </div>
+  </aside>
+ 
+  
+  <div class="span8">
+    <h3><%= @title %></h3>
+    <% if @users.any? %>
+      <table>
+          <% @users.each do |user| %>
+            <tr>
+              <td> <h2> <h2> <%= link_to user.name, user %> </h2> </h2> </td>
+              <td> &nbsp;&nbsp; </td>
+              <% if user.image.present? && user.image != "" %>
+                <td> <%= link_to image_tag(user.image, :size => "40x40"), user %> </td>
+              <% else %>
+                <td> <%= link_to image_tag("default_profile.jpg", :size => "40x40"), user %> </td>
+              <% end %>
+            </tr>
+          <% end %>
+        </table>
+      <%= will_paginate %>
+    <% end %>
+  </div>
+</div>

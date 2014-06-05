@@ -1,0 +1,17 @@
+For Tue. June 10, 2014
+
+Lisa:
+Clear github of old contributors
+Tshirt prices
+Tshirt integration with other businesses
+Think about kickstarter sponsor package item
+Free Video editing software for linux and windows
+Test with new video camera files
+Brainstorm stories for what the video/text will be about 
+
+Michael:
+Add like button to show page - DONE
+Make the Contact Us page functional - Will probably require adding in a messaging gem and a new controller, model, and db table. Postpone for kickstarter goal
+Look into getting shadowbox js to load without refresh - DONE
+Look into disabling post button when over character limit for micropost
+Draw up list for kickstarter goals, stretch goals, and reward packages

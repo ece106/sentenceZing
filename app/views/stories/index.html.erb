@@ -1,0 +1,49 @@
+<h1>Listing stories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th></th>
+      <th>Category</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+<tbody>
+    <% @stories.each do |story| %>
+      <tr>
+        <td>
+          <% if story.microposts.any? %>
+            <%= link_to story.title, edit_story_path(story), :title => story.microposts.first.content %>
+          <% else %>
+            <%= story.title %>
+          <% end %>
+        </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= story.category %></td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        
+        <% if current_user.id == story.user_id || current_user.id == story.user2id %>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td><%= link_to 'Edit Story', edit_story_path(story) %></td>
+        <% elsif story.user2id == nil || story.user2id == 0 %>
+          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          <td>
+            <%= form_for(story) do |f| %>
+              <%= f.hidden_field :user2id, :value => 0 %>
+              <%= f.submit 'Join Story' %>
+            <% end %>
+          </td>
+        <% else %>    
+          <td><%= link_to 'Read Story', edit_story_path(story) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <% end %>
+      </tr>
+    <% end %>
+</tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Story', new_story_path %>

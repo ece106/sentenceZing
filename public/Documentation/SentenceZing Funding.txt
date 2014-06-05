@@ -1,0 +1,15 @@
+Kickstarter Funding Requirements
+------------------------------------------------------------------------------------------
+-A donation goal
+-A time period within wich to meet donation goal to be funded
+-Reward packages for different donation amounts
+-Youtube channel to post an intial video explaining the website and updates on progress
+	-Youtube advertising and videos to gain interest
+-Some kind of marketing/advertising campaign to draw attention to kickstarter
+	-youtube, twitch, etc.
+	-gaming and creative communities
+-Stretch goals for extra features past the primary goal and donation amount
+-detailed and interesting description of ste, features, goals, and stretch goals
+-Explanation for use of funding
+-Link to Facebook SentenceZing page and keep it updated
+-Organize events with testing the site and give out prizes

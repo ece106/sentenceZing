@@ -1,0 +1,57 @@
+Early Adopters
+
+  1.  Hannah McNiell
+  2.  Dominic Vittitow
+  3.  Ryan Taulbee
+  4.  Christine Watkinson
+  5.  Jordin Schmidt
+  6.  Andrew Shay
+  7.  Kaitlyn Britton
+  8.  Brandon Jacobsen
+  9.  Cary Reese
+  10. Dylan Lack
+  11. Thomas Farewell
+  12. Robert Watkinson
+  Plus - Michael Watkinson, Brian Highnam, Roberto Isidro
+
+
+Method of Contact
+
+  intial: facebook/in person
+  while testing: skype/in person
+
+
+Plan
+
+  1. Sign up - New User Registration
+  2. Edit Profile information
+  3. Create New Story
+  4. Join the story they created
+  5. Add the first sentence to the story
+  6. Refresh page when other user adds the second story
+  7. Repeat steps 5 and 6 until each person has contributed 10 sentences
+  8. View the show page for the story 
+  9. Click link to the survey on the contact us page
+  
+
+Post Test Survey
+  Rate 1-10 questions
+    1. Did you enjoy the experience?
+    2. Would you use this site (when it is more polished)?
+    3. What do you think of these ideas of possible additions to the site?
+    4. How user friendly is the interface currently?
+	-Different story lengths (ex: 10,20,30 sentences)
+	-Allows more than only 2 people
+	-Creator picks a word or phrase that all others use in their sentences but don't see what the previous people say until the end.
+    4. Would you use the voting feature?
+    5. Would a top commentor title and badge be motivation to make well written stories?    
+
+
+  Free Response questions
+    1. What are the main issues that you saw?
+    2. Do you have any suggestions for future growth?
+    3. Have you used something similar before?
+    4. Would you purchase an illustrated ebook for a small fee of a dollar or less with a collection of top stories.
+    5. Would paying authors of the story a small amount of real money or some sort of site currency for their work be an interesting idea?
+	
+  

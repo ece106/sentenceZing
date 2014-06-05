@@ -1,0 +1,69 @@
+<%= form_for(@micropost) do |f| %>
+  <% if @micropost.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@micropost.errors.count, "error") %> prohibited this micropost from being saved:</h2>
+
+      <ul>
+      <% @micropost.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :STORY %><br>
+    <%= f.text_field :STORY %>
+  </div>
+  <div class="field">
+    <%= f.label :sent1 %><br>
+    <%= f.text_field :sent1 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent2 %><br>
+    <%= f.text_field :sent2 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent3 %><br>
+    <%= f.text_field :sent3 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent4 %><br>
+    <%= f.text_field :sent4 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent5 %><br>
+    <%= f.text_field :sent5 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent6 %><br>
+    <%= f.text_field :sent6 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent7 %><br>
+    <%= f.text_field :sent7 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent8 %><br>
+    <%= f.text_field :sent8 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent9 %><br>
+    <%= f.text_field :sent9 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent10 %><br>
+    <%= f.text_field :sent10 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent11 %><br>
+    <%= f.text_field :sent11 %>
+  </div>
+  <div class="field">
+    <%= f.label :sent12 %><br>
+    <%= f.text_field :sent12 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

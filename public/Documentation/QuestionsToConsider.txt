@@ -1,0 +1,25 @@
+- How much money do we want from kickstarter/other sources before we pay ourselves
+- If we got x amount, would Michael prefer to quit his job & after how many months
+- How much equity (% ownership) will each of us have in LLC ownership
+- Cobble together TOS
+- Ownership of intellectual property
+- What are our thresholds for hiring additional staff & what skill sets will we hire first
+- What are your conflicts & priorities
+- What kind of schedule do you intend to keep
+- Issues with offering equity to employees
+
+
+
+Thoughts about priorities: why work with someone else rather than do it alone
+
+
+- Do we each create our own LLCs, each with a % ownership of product or 1 LLC
+- At what point do we form an LLC
+- When/why do we hire a lawyer
+- When do we purchase liability insurance
+- Accounting
+- Open source: issues of other code contributors. Create/copy MIT license agreement
+- Salary/equity tradeoff among cofounders
+- What factors go into calculating salary of cofounders
+
+- Messy accounting: should I close down my LLC

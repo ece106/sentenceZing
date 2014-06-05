@@ -1,0 +1,469 @@
+﻿1975
+Wrote first practice book, decided to write several real books some day.
+
+
+1977
+Wrote first computer program, decided it would be my skill set for a future job.
+Experimented with Eliza AI chat program and Animal Game binary tree.
+
+
+Summer 1980
+Wrote half a book with no plot. On a typewriter. Decided typewriters were a waste of time.
+
+
+Spring 1984
+Wrote autobiography as an experiment in writing in Second Person. 
+Chosen to attend ASU Young Authors Day.
+
+
+1984-1988
+Went to high school & learned to hate writing.
+As assignments for English class, wrote future-autobiography about how I became a hooker and how I became homeless.
+
+
+August 1988
+Discovered WordPerfect. Inspired thinking about software I could develop that would be useful for all.
+
+
+February 1989
+Unofficially named TA's Helper in C programming class for clearing away the lines out his office by answering all their questions.
+
+
+Summer 1993
+Took a technical writing course and learned to enjoy writing again.
+
+
+1994
+Bored with my job, collected stories and interviews about what engineers do. Spoke with several academic book agents.
+
+
+October 1995
+Taught my students to create a basic web site. “This will be very important some day. But I don't know why.”
+
+
+1996
+Lived in DC and kept email journal and a list of potential book topics.
+
+
+Fall 1997
+Declared Information Technology as my PhD minor, took object-oriented programming course.
+Started collection of stories from my life as notes for a future book.
+
+
+1998
+Took Java course, created web applets related to PhD dissertation.
+Lived in Ohio and continued email journal and list of potential book topics.
+Found out boss from 1996 was in jail for kickbacks.
+
+
+Fall 1999
+Took a graduate-level e-commerce & database course. Developed a basic e-commerce site (with obsolete back end).
+
+
+2003
+After realizing all my jobs so far had been a bad joke, got serious about outlining plot ideas. Decided on novel about government managers taking kickbacks to finance terrorism projects. 
+
+
+2004
+Joined Reston writers critique group.
+Joined Women's National Book Association.
+Discovered that even though I had no professional writing background, I belonged in those groups more than many of their other members.
+
+
+2005
+Started a blog about engineers impact on society.
+Took graduate-level screenwriting classes from Hollywood screenwriter.
+Took graduate-level video production class.
+
+
+October 30, 2006
+Joined Facebook, experimented with social media
+
+
+September 30, 2007
+Started anonymous blog about what went on in FAA offices
+
+
+November 8, 2007
+Started writing 50 two-minute episodes about what it was like working for FAA contractor as a female engineer.
+
+
+March 5, 2008
+Formed an LLC dedicated to creating stories about everyday female role models in technology and communicating the stories through emerging media formats.
+
+
+June 22, 2008
+Held day-long shoot session, first taping for “Budget Justified.”
+
+
+November 2008
+Started writing my High School Story book and screenplay.
+
+
+December 2009
+Met with business consultant to discuss the future of social media and gaming for business. She recommended experimenting with Second Life.
+
+
+February 2010
+Joined Second Life during a snowstorm. Joined a builders community and established a virtual location for book discussion events.
+
+
+March 2010
+Created male character in Second Life, started writing book on chat and social interaction in virtual worlds.
+
+
+February 26, 2011
+Changed direction of LLC: To create internet platform for writers to build community and interact with their audience
+
+
+May 2011
+Posted movie version of “Budget Justified” on Amazon.
+
+
+February 2012
+Joined Book Island in Second Life. Participated in many philosophical and book-related discussions.
+
+
+January 26, 2013
+Elected Secretary of the Northern Virginia Writers Club: kept record of club meetings, attended meetings to assess members' social media skills and needs.
+
+
+May 5, 2013
+Had first signing for “Budget Justified: The Waste, Fraud & Abuse of Government Workers.”
+
+
+September 2013
+Proposed course for Ruby on Rails for Entrepreneurs.
+
+
+November 2013
+Got syllabus for Rails course approved.
+
+
+January 25, 2014
+Elected President of the Northern Virginia Writers Club: Recruited committee chairs to develop more opportunities to build community among local book enthusiasts
+
+
+January 28, 2014
+Prepared material for class
+
+
+February 3, 2014
+Prepared Rails information for class
+
+
+February 11, 2014
+Reviewed SentenceZing proposal
+
+
+February 17, 2014
+Prepared chapter 4 & 6 CSS, secure password, & routes tutorial summary
+
+
+February 25, 2014
+Met with SentenceZing team to analyze progress and guide team's next steps
+Prepared Chapter 7 tutorial summary
+
+
+March 2, 2014
+Debugged routes & controller issues, pushed to github
+Consulted on bad links and heroku rake
+Skype debugging session with Brian & Michael
+
+
+March 3, 2014
+Invited a few indie authors to join SentenceZing facebook page
+
+
+March 8, 2014
+Explored Steam video games to research analogies between gaming and interactive storytelling
+
+
+March 11, 2014
+Considered kickstarter spin of collaborating on stories across cultures
+Evaluated progress on Hartl Chapter 8
+
+
+March 12, 2014
+Met with business consultant to ask about LLC and domain name ownership
+
+
+March 16, 2014
+Looked up storytelling games Michael likes – Jim Dattilo
+
+
+March 17, 2014
+Skype debugging session for secure passwords.
+
+
+March 18, 2014
+Organized criteria for Minimum Viable Product
+
+
+March 19, 2014
+Redesigned database, debugged sessions controller
+Evaluated Michael's understanding of the current state of the code
+
+
+March 20, 2014
+Debugged dropdown menu
+
+
+Fri March 21, 2014
+Debugged users controller for new user attributes
+
+
+Sat March 22, 2014
+Worked on code to associate microposts with stories & users
+Added an on/offline feature to user profiles
+
+
+Sun March 23, 2014
+Implemented a working database model & display page for a series of microposts within a story
+
+
+Mon March 24, 2014
+Researched methods for recruiting and retaining early adopters
+Evaluated Michael's formatting 
+Chat brainstorm for next steps
+
+
+Tue March 25, 2014
+Cleaned up sentenceZing design
+Discussed information about recruiting and surveying early adopters
+
+
+Wed March 26, 2014
+Debugged heroku ssl redirecting issue
+Implemented routing to continue story after entering sentence
+
+
+Thu March 27, 2014
+Modified story routing
+
+
+Fri March 28. 2014
+Prepared information about site revenue
+
+
+Sat March 29, 2014
+Modified story routing
+Monitored early adopter testing
+
+
+Sun March 30, 2014
+Worked on micropost text area
+Discussed Michael's & my future roles on sentenceZing
+
+
+Mon March 31, 2014
+Helped debug turbolinks problem with javascript not displaying until refresh
+
+
+Tue April 1, 2014
+Discussed site payments
+Negotiated tasks for the week
+
+
+Sat April 5, 2014
+Reviewed early adopter testing
+
+
+Sun April 6, 2014
+Researched twitch.tv live storytelling game sessions
+Skype session for refreshing pages upon entering sentence
+
+
+Mon April 7, 2014
+Prepared material for CarrierWave gem
+Researched AJAX scripting
+Skype debugging session for adding second user to story
+
+
+Tue April 8, 2014
+Got some AJAX script working from coffeescript file
+
+
+Thu April 10, 2014
+Got AJAX script for 
+Went to DCRUG to ask about AJAX
+
+
+Sun April 13, 2014
+Skype session to get CarrierWave working 
+Worked out env variables for heroku
+
+
+Mon April 14, 2014
+Outlined tasks for the following week
+
+
+Tue April 15, 2014
+Read AJAX documentation
+Helped with cleaning up tmp files, getting AWS keys off github
+Diagnosed CSRF tag deletion, causing logout failure
+Helped with story update_attribute in micropost form
+
+
+Sun April 20, 2014
+Researched gems for social networking/friending
+
+
+Mon April 21. 2014
+Outlined tasks for the following week
+Helped with users index page
+
+
+Tue April 22, 2014
+Discussed copyright issues
+Worked on Michael's access to heroku pg database
+Cleaned up bad data in heroku database
+
+
+Wed April 23, 2014
+Installed CarrierWave updates locally
+Worked on graphics resizing issues
+
+
+Thu April 24, 2014
+Read through AJAX documentation
+Experimented with AJAX code
+
+
+Fri April 25, 2014
+Lots and lots of AJAX reviewing and experimenting
+
+
+Sat April 26, 2014
+Read through more AJAX online
+
+
+Sun April 27, 2014
+Experiment with AJAX code
+
+
+Mon April 28, 2014,
+Spend lots of time trying to understand AJAX
+
+
+Tue April 29, 2014
+Read through AJAX
+Review funding ideas for copyright issues
+
+
+Sat May 3, 2014
+Reviewed code for chat apps, tried analogies with story microposts
+
+
+Sun May 4, 2014
+Experimented with lots of chat js from the web
+
+
+Mon May 5, 2014
+Experimented with refresh AJAX
+
+
+Tue May 6, 2014
+Helped debug notifications
+Tried some more refresh modifications
+Reviewed Michael's proposal for work for upcoming week
+Helped Michael with notifications logic
+
+
+Wed May 7, 2014
+Pulled and implemented Michael's changes onto local machine
+Cleaned up heroku database
+
+
+Fri May 9, 2014
+Cleaned up more database issues
+Added a hover capability to see first sentence of a story
+Worked on stories refresh
+
+
+Sun May 11, 2014
+Recruited three early adopters
+
+
+Mon May 12, 2014
+Helped Michael with shadowbox js for final exam
+
+
+Tue May 13, 2014
+Helped Michael with indexes, Like feature for final exam
+
+
+Thu May 15, 2014
+Debugged incompatibility between Heroku and Shadowbox css
+Started a new sentenceZing repo on Github
+Cleaned up files from ineffective contributors	
+
+
+Fri May 16, 2014
+Led an early adopter through the usage process
+
+
+Sun May 18, 2014
+Try POST method of AJAX for refresh
+
+
+Mon May 19, 2014
+Wrote stackoverflow question about AJAX refresh
+
+
+Tue May 20, 2014
+Spent most of the day getting POST method to work
+
+
+Wed May 21, 2014
+Spent most of the day trying to kludge RailsCast 229 into js
+
+
+Thu May 22, 2014
+Spent most of the day getting index.js.erb logic to work
+Went to meetup to get help on setTimeout function
+
+
+Fri May 23, 2014
+Helped Michael with Unlike button
+
+
+Sat May 24, 2014
+Cleaned up some mess I had left in trying to debug Unlike button
+
+
+Mon May 26, 2014
+Created a list of discussion topics for business decisions
+
+
+Tue May 27, 2014
+Reviewed Michael's changes to stories#show
+
+
+Fri May 30, 2014
+Set up appointment with SCORE counselor
+
+
+Sun June 1, 2014
+Diagnosed griefing issue with Edward Snowden
+Recruited new user to the site
+Fixed griefing issue of joining stories without contributing
+
+
+Mon June 2, 2014
+Brainstormed edible, drinkable, & wearable stories
+
+
+Tue June 3, 2014
+Skype session on general business stuff
+
+
+Wed June 4, 2014
+Meeting with SCORE counselor Ron Paulson
+
+
+Thu June 5, 2014
+Review LLC Articles of Incorporation info from SCORE
+Cleared old commits from class github repo
+
+

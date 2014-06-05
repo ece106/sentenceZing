@@ -1,0 +1,97 @@
+<div class="userProfile">
+  <p id="notice"><%= notice %></p>
+
+  <div class="profilePicture" style="width:25%;height:300px;float:left;overflow:hidden">
+        <% if @user.image.present? && @user.image != "" %>
+          <%= image_tag(@user.image, :size => "250x250") %> 
+        <% else %>
+          <%= image_tag "default_profile.jpg", :size => "250x250" %>
+        <% end %>
+  </div>
+
+  <div class="banner" style="width:75%;height:300px;float:left;overflow:hidden">
+        <% if @user.banner.present? && @user.banner != "" %>
+          <%= image_tag(@user.banner, :size => "600x300") %>
+        <% else %>
+          <%= image_tag "default_banner.jpg", :size => "600x300" %>
+        <% end %>
+  </div>
+  
+  <div class="userInfo" style="width:25%;float:left">
+  	<br/>
+  	<table>
+      <tr>
+        <td> <h2> <strong>Username: </strong> </h2> </td>
+        <td> &nbsp;&nbsp; </td>
+        <td> <h2> <%= @user.name %> </h2> </td>
+      </tr>
+      <tr>
+      	<td> <h2> <strong>Status: </strong> </h2> </td>
+      	<td> &nbsp;&nbsp; </td>
+        <td> 
+      	  <% if @user.loggedin == 1 %>
+            <h2> Online </h2>
+          <% else %>
+            <h2> Offline </h2>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td> <h2><strong>SentenceZings:</strong></h2> </td>
+        <td> &nbsp;&nbsp; </td>
+        <td> <h2><%= @user.microposts.count %></h2> </td>
+      </tr>
+      <tr>
+        <td>
+          <h2> <a href="<%= following_user_path(@user) %>">
+            <strong id="following" class="stat">
+              <%= @user.followed_users.count %>
+            </strong>
+            following
+          </a> </h2>
+        </td>
+        <td> &nbsp;&nbsp; </td>
+        <td>
+          <h2> <a href="<%= followers_user_path(@user) %>">
+            <strong id="followers" class="stat">
+              <%= @user.followers.count %>
+            </strong>
+            followers
+          </h2> </a>
+        </td>
+      </tr>
+      <tr>
+        <td> 
+          <%= render 'follow_form' if signed_in? %>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="space" style="width:5%;float:left">
+  </div>
+  
+  <div class="userInfo2" style="width:70%;float:left">
+  	<br/>
+    <table>
+      <tr>
+        <td> <h2> <strong>User Bio: </strong> </h2> </td>
+        <td> <h2> <%= @user.aboutme %> </h2> </td>
+      </tr>
+      </table>
+      <table>
+      <tr>
+        <td>Stories Contributed to:<td>
+        <br/> <br/>
+      </tr>
+      <% @stories.each do |story| %>
+      <% if @user.id == story.user_id || @user.id == story.user2id %>
+        <tr>
+          <td> <%= link_to story.title, edit_story_path(story.id) %> </td>
+        </tr>
+      <% end %>
+    <% end %>
+    </table>
+  </div>
+  
+</div>

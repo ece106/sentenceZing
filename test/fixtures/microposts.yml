@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  STORY: MyString
+  sent1: MyString
+  sent2: MyString
+  sent3: MyString
+  sent4: MyString
+  sent5: MyString
+  sent6: MyString
+  sent7: MyString
+  sent8: MyString
+  sent9: MyString
+  sent10: MyString
+  sent11: MyString
+  sent12: MyString
+
+two:
+  STORY: MyString
+  sent1: MyString
+  sent2: MyString
+  sent3: MyString
+  sent4: MyString
+  sent5: MyString
+  sent6: MyString
+  sent7: MyString
+  sent8: MyString
+  sent9: MyString
+  sent10: MyString
+  sent11: MyString
+  sent12: MyString

@@ -1,0 +1,32 @@
+<h1><%= @story.title %></h1>
+<h2><%= @story.category %></h2>
+
+<center> 
+<div class="storyfeed" data-story-id="<%=@story.id %>" data-story-turn="<%=@story.turn %>" data-curruser="<%=current_user.id %>" >
+  <% if @story.microposts.any? %>
+    <%= render 'shared/feed' %>
+  <% end %>
+</div> </center>
+
+<br>
+<div class="dummyappend" >
+</div>
+
+<div class="textbox" data-story-id="<%=@story.id %>" data-story-turn="<%=@story.turn %>" >
+  <% if current_user.id == @story.user_id || current_user.id == @story.user2id || @story.user2id == 0 %>
+    <% if current_user.id != @story.turn %>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    <% else %>
+      <section>
+        <p> Wait your turn! </p>
+      </section>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to 'Show', @story %> |
+<%= link_to 'Back', stories_path %>
+
+<a name="bottom"></a>

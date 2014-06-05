@@ -1,0 +1,43 @@
+<% provide(:title, "Profile") %>
+<h1>Profile</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+
+   <!-- Table for Profile info  -->
+            <!-- Form for entering profile info -->
+            <%= form_for @user, :html => {:multipart => true} do |f| %>
+               <%= render 'shared/error_messages', object: f.object %>
+                <table>
+                  <tr>
+                     <td>  <%= f.label :name, "Username" %>    </td>
+                     <td>  <%= f.text_field :name %>   </td>
+
+                     <td>  <%= f.label :aboutme, "User Bio" %>    </td>
+                     <td>  <%= f.text_area :aboutme, placeholder: "About Me" %>   </td>   
+                 </tr>
+                 <tr>
+                      <td>  <%= f.label "Profile Picture" %>   </td>
+                      <td> <%= f.file_field :image %>  </td>
+		      
+                      <td>  <%= f.label "Banner" %>   </td>
+                      <td> <%= f.file_field :banner %>  </td>
+                 </tr>
+                 <tr>
+                      <td>  <%= f.label :email %>  </td>
+                      <td> <%= f.text_field :email  %>  </td>
+                </tr>
+                <tr>
+                    <td>  <%= f.label :password %>  </td>
+                    <td>  <%= f.password_field :password %>    </td>
+                      
+                    <td>  <%= f.label :password_confirmation, "Confirm Password" %> </td>
+                    <td>  <%= f.password_field :password_confirmation %>   </td>
+                </tr>
+              </table> <!-- end of table for profile info  -->
+              <br />
+            <%= f.submit "Update Profile", class: "btn btn-large btn-primary" %>
+          <% end %> <!-- end of form for entering profile info -->
+
+  </div>
+</div>

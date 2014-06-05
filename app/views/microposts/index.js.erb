@@ -1,0 +1,19 @@
+//  alert(<%= current_user.id %> );
+//$('.storyfeed').append( <%= current_user.id %> );
+
+window.setTimeout(function(){
+
+  if (<%= @story.turn %>  ==  <%= current_user.id %> ) {
+
+        $.ajax({
+            type: "GET",
+            url: "/stories/"+$('.storyfeed').data('story-id') + "/postbox" // what is being gotten
+        }).done(function(result) {
+            var $sentence_requests = $('.storyfeed');
+            if ($sentence_requests.length > 0) {
+                $sentence_requests.html(result); //result goes inside sentencereq (storyfeed div)
+            } else {
+            }
+        })
+  }
+}, 11000); 

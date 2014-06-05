@@ -1,0 +1,124 @@
+SentenceZing Survey Results
+---------------------------
+                                                                                                 1     2    3    4     5
+Q1: Experience Rating                                                                        | Least |   | Meh |   | Most  | Total  | Average Rating |
+	Did you enjoy the experience?                                                            |   0   | 1 |  2  | 2 |   16  |   21   |      4.57      |
+	Would you use this site again?                                                           |   0   | 1 |  1  | 5 |   14  |   21   |      4.52      |
+	How user friendly is the interface currently?                                            |   0   | 2 |  2  | 9 |   8   |   21   |      4.10      |
+	Would you use a voting feature to vote on your favorite stories of the week?             |   0   | 2 |  3  | 4 |   12  |   21   |      4.24      |
+    Would a top commentor title and badge be motivation to be the story of the week?         |   0   | 1 |  4  | 2 |   14  |   21   |      4.38      |
+
+
+                                                                                                 1        2   3      4    
+Q1: Future Site Additions Rating                                                             | Terrible |   |   | Awesome | Total  | Average Rating |
+	Different Story lengths (10,20,30 sentences)                                             |   1      | 1 | 5 |   14    |   21   |      3.52      |
+	Allow more than 2 people per story                                                       |   0      | 1 | 5 |   15    |   21   |      3.67      |
+	Common phrase everyone must use, but don't see rest of story until the end.              |   3      | 2 | 4 |   12    |   21   |      3.19      |
+
+
+Q3: What are the main issues with the site currently?
+	1.  "Nothing unexpected from a beta site"
+	2.  "Some interface issues. Its clearly in the early stages."
+	3.  "No automatic refresh"
+	4.  "Limited typing space"
+	5.  "Links more prominently displayed on homepage."
+	6.  "Automatic refresh of the page is not happening."
+	7.  "Nothing really. It looks very well done!"
+	8.  "Security issues - I can see everyone's email!!!"
+	9.  "none"
+	10. "You have to refresh sometimes to see things"
+	11. "No notifications for story updates. FIXXZ"
+	12. "Some polishing... refresh button, instructions, etc... not much though"
+	13. "Couldnt find any main issues with the site."
+	14. "The Survey not loading"
+	15. "Dat post refresh button being right above and under each other! It makes the site unbearable! Not really unbearable but it can be annoying."
+	16. "Put Refresh and post side by side. Make it so you don't have to refresh for the survey. Lastly if you can make it so if you accidently refresh you wont lose what you've typed."
+	17. "Survey doesn't seem to be working with Chrome. Refreshing encourages other user to become a troll."
+	18. "having to refresh to see if the story has been updated."
+	19. "Should have Automatic updates when sentences are added, so the other user knows it's his turn without constantly refreshing. Survey lacks instruction to refresh in order to get the info."
+
+
+Q4: Do you have any suggestions?
+	1.  "More people per story, allow unlimited people but lock it when someone is typing."
+	2.  "Give some warning about the character limit and if one exceeds the limit let them know as opposed to kicking them to the home page"
+	3.  "Character limits in text box shown"
+	4.  "Teams for group for competition."
+	5.  "Match members by both genre and age range."
+	6.  "Can add more images or animations to make the site more appealing."
+	7.  "No suggestions"
+	8.  "Tabs are not quite right. Why is "Voting" where I can view stories?"
+	9.  "randomized starts to the stories"
+	10. "Have more than one person work on the stories maybe"
+	11. "More than two people in a story"
+	12. "Music themes for inspiration option. Free coffee. Pizza."
+	13. "Site needs to list explanation of what the purpose of the site is."
+	14. "add pizaz!"
+	15. "Redo your graphic for SentenceZing with a capital "S"?"
+	16. "2-panel video story telling"
+	17. "maybe to be able to combine multiple stories together (rather like chapters). Oh, and once a story is 'done' maybe letting the authors go back and be able to edit previous entries."
+	18. "Maybe have some story starters for those with writer's block. Maybe have toggle for categories. Terms of Use needs to be added and agreed to in order to participate on site and make sure the terms include that no actual names can be used. Special delete by site owner if circumstances warrant. Trademark or patent your site."
+
+
+Q5: Have you used a site similar to this or done this kind of activity before?
+	1.  "I swear I have seen a site like this but cant find it"
+	2.  "never"
+	3.  "nope"
+	4.  "no"
+	5.  "No"
+	6.  "No."
+	7.  "I have done madlibs before, but not in a website. This is a really neat idea!"
+	8.  "No"
+	9.  "never"
+	10. "No I have not."
+	11. "Maybe once"
+	12. "This is new to me!"
+	13. "No"
+	14. "i have not used a site like this but have done activities like this before!"
+	15. "not on the internet. ive done something like this on paper. It would be fun like omegle."
+	16. "Depends on what qualifies as 'similar'"
+	17. "No, haven't done anything like this nor do I know of any site like this...( I suppose people could use a google doc to do this if they really wanted.)"
+	18. "No. Reminds me of Scrabble where there are two players building off each others words. In this case, it is building off sentences to create a story."
+	
+
+Q6: If an e-book was made from top stories with illustrations and awesomeness, would you consider buying it if it was less than a dollar?
+	1.  "Possibly"
+	2.  "absolutely. I think it could be really really good"
+	3.  "Depends on how much awesomeness, but maybe and possibly"
+	4.  "Yes"
+	5.  "yes"
+	6.  "Yes."
+	7.  "Yes I would!"
+	8.  "Need to see if the stories are any good. This can be a really fun game between people, but I doubt it will turn into a bestseller."
+	9.  "yes"
+	10. "Yes thats a steal of a deal"
+	11. "Yes"
+	12. "Yes."
+	13. "Yes"
+	14. "yes only if mike gives me a hug!"
+	15. "By less than a dollar do you mean $.99?"
+	16. "no. But please give me some awesomeness, Mr. Awesome."
+	17. "maybe"
+	18. "Yes, I would purchase it."
+
+
+Q7: Would paying authors of the top story a small amount of real money or some sort of site currency for their work to be included in the ebook be an interesting idea?
+	1.  "yes"
+	2.  "I feel that would add a whole legal aspect to it and make it less free and enjoyable. NO SELLING OUT"   (Think they misunderstood the question as saying people had to pay to use the site)
+	3.  "that does sound like it could be interesting"
+	4.  "Yes"
+	5.  "yes"
+	6.  "Yes."
+	7.  "No they should not. This is just to get people to have some fun creating their own wacky stoires."   (Think they misunderstood the question as saying people had to pay to use the site)
+	8.  "meh"
+	9.  "sure!"
+	10. "Yes"
+	11. "Absolutely"
+	12. "Always. But money/copyright issues are messy"
+	13. "Yes"
+	14. "yes"
+	15. "I think it would be good motivation for people to write good stories."
+	16. "I really like the idea of site currency. Buy/win/spend credits to open story to more players, be able to upload/stream video, to get your story 'featured,' to get fancy stuff posted on your profile, to hold their own contests, to give virtual gifts/prizes"
+	17. "Yeah."
+	18. "Great idea, but Where would the money come from? If you make a lot from selling e-books that would be great to share the profits. But, you can't pay out of pocket ongoing."
+
+

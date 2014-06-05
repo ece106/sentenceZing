@@ -1,0 +1,22 @@
+<div class="microform" data-story-id="<%=@story.id %>" data-story-turn="<%=@story.turn %>" >
+
+    <%= form_for(@micropost) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.hidden_field :story_id %>
+      <center>
+
+      <div class="textarea">
+        <%= f.text_area :content, :cols => 100, :rows => 4, placeholder: "Add to the story!" %>
+      </div>
+    
+      <span class="countdown"></span>
+      </br></br>
+
+      <div class="postbutton">
+            <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+      </div>
+
+      </center>
+    <% end %>
+
+</div>
