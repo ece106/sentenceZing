@@ -463,7 +463,21 @@ Meeting with SCORE counselor Ron Paulson
 
 
 Thu June 5, 2014
-Review LLC Articles of Incorporation info from SCORE
-Cleared old commits from class github repo
+Reviewed LLC Articles of Incorporation info from SCORE
+Reviewed Free Video editing software for linux and windows 
 
 
+Fri June 6. 2014
+Reviewed LLC Operating Agreement info from SCORE
+
+
+Sun June 8, 2014
+Reviewed LLC Operating Agreement info from 2 sources on web
+Brainstormed about kickstarter sponsor package items
+Brainstormed stories for what the video/text will be about
+
+
+Mon June 9, 2014
+Tested OpenShot with new video camera files, installed codecs (good)
+Tested OpenShot with old video camera files (not good)
+Reviewed employer intellectual property agreements
