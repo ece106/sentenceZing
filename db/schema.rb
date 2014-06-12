@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140513202518) do
+ActiveRecord::Schema.define(version: 20140612040603) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 20140513202518) do
     t.datetime "updated_at"
   end
 
+  add_index "microposts", ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
+
   create_table "relationships", force: true do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
@@ -57,6 +59,14 @@ ActiveRecord::Schema.define(version: 20140513202518) do
   add_index "relationships", ["followed_id"], name: "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
+
+  create_table "sessions", force: true do |t|
+    t.string   "new"
+    t.string   "create"
+    t.string   "destroy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "stories", force: true do |t|
     t.string   "title"
@@ -83,7 +93,6 @@ ActiveRecord::Schema.define(version: 20140513202518) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "remember_token"
     t.string   "password_digest"
     t.string   "name"
     t.string   "permalink"
@@ -91,6 +100,7 @@ ActiveRecord::Schema.define(version: 20140513202518) do
     t.text     "aboutme"
     t.string   "image"
     t.string   "banner"
+    t.string   "remember_token"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"

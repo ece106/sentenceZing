@@ -117,3 +117,7 @@ Moved like button to story show page
 Moved like form to story show page
 Set link in header to voting page to disable turbolink so shadowbox works
 Attended SCORE advisor meeting
+
+Week of June 10th, 2014
+Fixed database migrations for cloned versions of new github repostory
+Fixed survey to show up without page refresh

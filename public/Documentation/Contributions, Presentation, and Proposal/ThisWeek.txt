@@ -17,6 +17,10 @@ Look into getting shadowbox js to load without refresh - DONE
 Look into disabling post button when over character limit for micropost
 Draw up list for kickstarter goals, stretch goals, and reward packages
 
+Fix migrations for cloned copies of new github repository
+Fix survey page to load survey without refresh
+Send out update email
+advertise on Facebook to friends
 
 
 
