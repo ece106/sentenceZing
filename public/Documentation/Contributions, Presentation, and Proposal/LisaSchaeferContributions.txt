@@ -481,3 +481,13 @@ Mon June 9, 2014
 Tested OpenShot with new video camera files, installed codecs (good)
 Tested OpenShot with old video camera files (not good)
 Reviewed employer intellectual property agreements
+
+
+Tue June 10, 2014
+Reviewed LLC Operating Agreement info from SCORE
+
+
+Thu June 11, 2014
+Debugged problems with heroku migrations, survey
+
+
