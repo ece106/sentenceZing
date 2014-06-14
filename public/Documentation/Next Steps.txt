@@ -27,10 +27,10 @@ SentenceZing Next Steps
    5.2               Make the Contact Us page functional                                                                Postponed
    5.3               Added third part chat room to site (Chatango)                                                      Completed
    
- 6                User Images                                                                                          (2/3)
+ 6                User Images                                                                                         Completed (3/3)
    6.1               Profile Pictures                                                                                   Completed
    6.2               Cover Photo                                                                                        Completed     
-   6.3               Pictures by user sentences                                                                         !In Progress!
+   6.3               Pictures by user sentences                                                                         Completed
    
  7                User Profile                                                                                        Completed (2/2)
    7.1              Reformat                                                                                            Completed

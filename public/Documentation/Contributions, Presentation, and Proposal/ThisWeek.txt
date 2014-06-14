@@ -21,6 +21,7 @@ Improve current js
   Moved story.js refresh to story edit page to reduce hit to processing memory on every page
   Added post button disable when over character limit
   removed stripe coffeescript that was running in the background
+Added user pictures to story edit and show pages
 
 
 Kickstarter Video & Text content:

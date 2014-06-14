@@ -2,9 +2,16 @@
   <li id="<%= feed_item.id %>">
      <table>
   	  <tr>
-        <td width="75%"> <%= feed_item.content %> </td>
-        <td width "10%"%>  </td>
-    	  <td width="25%"> <%= link_to feed_item.user.name, feed_item.user %> - <%= time_ago_in_words(feed_item.created_at) %> ago </td>
+        <td width="70%"> <%= feed_item.content %> </td>
+        <td width "7%"%>  </td>
+    	  <td width="30%"> 
+    	  	<% if feed_item.user.image.present? && feed_item.user.image != "" %>
+    	  	  <%= link_to image_tag(feed_item.user.image, :size => "30x30"), feed_item.user %>  
+    	  	<% else %>
+    	  	  <%= link_to image_tag("default_profile.jpg", :size => "30x30"), feed_item.user %> 
+            <% end %>
+    	  	<%= link_to feed_item.user.name, feed_item.user %> - <%= time_ago_in_words(feed_item.created_at) %> ago 
+    	  </td>
       </tr>
     </table>
   </li>
