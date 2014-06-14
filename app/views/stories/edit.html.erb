@@ -30,3 +30,18 @@
 <%= link_to 'Back', stories_path %>
 
 <a name="bottom"></a>
+
+<script type="text/javascript">
+  $(document).on("page:change", function() 
+  {
+    var $storyid = $('.storyfeed').data('story-id'); 
+    $.getScript('/microposts.js?story_id=' + $storyid );
+ 
+    function refreshStories()
+    {
+      $.getScript('/microposts.js?story_id=' + $storyid);
+    };
+    
+    setInterval(refreshStories, 15000);
+  });  
+</script>

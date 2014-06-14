@@ -121,3 +121,11 @@ Attended SCORE advisor meeting
 Week of June 10th, 2014
 Fixed database migrations for cloned versions of new github repostory
 Fixed survey to show up without page refresh
+Sent out update email to all users
+Made update message on Sentencezing Facebook page
+Advertised on Facebook to friends
+Improve current js
+  Moved story.js refresh to story edit page to reduce hit to processing memory on every page
+  Added post button disable when over character limit
+  removed stripe coffeescript that was running in the background
+

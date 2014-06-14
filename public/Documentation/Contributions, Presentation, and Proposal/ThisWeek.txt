@@ -17,7 +17,10 @@ Fix migrations for cloned copies of new github repository
 Fix survey page to load survey without refresh
 Send out update email
 advertise on Facebook to friends
-
+Improve current js
+  Moved story.js refresh to story edit page to reduce hit to processing memory on every page
+  Added post button disable when over character limit
+  removed stripe coffeescript that was running in the background
 
 
 Kickstarter Video & Text content:
