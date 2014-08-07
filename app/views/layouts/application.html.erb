@@ -10,9 +10,10 @@
   <body>
 	<%= render 'layouts/header' %>
 	<center>
-	<div class="banner" style="width:500px;height:100px;float:center;overflow:hidden">
-      <img src="/assets/sentencezing.png" alt="SentenceZing Logo" height="200" width="900">
+	  <div class="banner" style="width:500px;height:100px;float:center;overflow:hidden">
+      <%= image_tag("/assets/sentencezing.png", :size => "500x100") %>
     </div>
+
     <div class="container">
       <%= yield %>
     </div> 

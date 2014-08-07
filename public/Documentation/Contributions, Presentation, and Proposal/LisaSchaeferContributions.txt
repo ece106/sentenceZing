@@ -485,9 +485,59 @@ Reviewed employer intellectual property agreements
 
 Tue June 10, 2014
 Reviewed LLC Operating Agreement info from SCORE
+Recruited potential kickstarter contributor
 
 
-Thu June 11, 2014
+Thu June 12, 2014
 Debugged problems with heroku migrations, survey
+
+
+Mon June 16, 2014
+Solved heroku crash problem
+
+
+Fri June 20, 2014
+Met with Michael to go over Operating Agreement
+
+
+Wed June 25, 2014
+Reviewed three Operating Agreements
+
+
+Sat June 28, 2014
+Edited Operating Agreement
+
+
+Sun June 29, 2014
+Finalized draft of Operating Agreement
+Chatted with Michael about job titles, roles 
+
+
+Tue July 1, 2014
+Read through AJAX to figure out if there's something that can be done so heroku doesn't crash and need a restart.
+
+
+Thu July 3, 2014
+Diagnosed the image resize ratio issue as @bootstrap imported in custom.css
+
+
+Wed July 23, 2014
+Talked to Arlington writers meetup about doing a sentenceZing exercise at a meetup
+
+
+Fri Aug 1, 2014
+Reviewed 33 page example of Operating Agreement
+
+
+Sat Aug 2, 2014
+Skype call with Michael about Operating Agreement, SentenceZing headquarters, collaboration calendar
+
+
+Wed Aug 6, 2014
+Reviewed and experimented with Bootstrap updates
+
+
+Thu Aug 7, 2014
+Implemented Bootstrap updates
 
 

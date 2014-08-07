@@ -1,3 +1,4 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 
 /* mixins, variables, etc. */
@@ -27,6 +28,20 @@ textarea {
   h1 {
     margin-bottom: 10px;
   }
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > .active > a, 
+.navbar-inverse .navbar-nav > .active > a:hover, 
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #E7E7E7;
 }
 
 /* typography */
@@ -61,7 +76,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
@@ -69,10 +84,10 @@ p {
   line-height: 1;
   a
   {
-    color: $white;
+    color: #fff;
     &:hover 
     {
-      color: white;
+      color: #fff;
       text-decoration: none;
     }
   }
@@ -86,7 +101,7 @@ footer {
   border-top: 1px solid $grayMediumLight;
   color: black;
   a {
-    color: $gray;
+    color: #cccccc;
     &:hover {
       //color: $grayDarker;
     }
@@ -119,7 +134,7 @@ footer {
   display: block;
 }
 .timestamp {
-  color: $grayLight;
+  color: #bbb;
 }
 .gravatar {
   float: left;
@@ -137,7 +152,7 @@ aside {
 .countdown {
   display: inline;
   padding-left: 30px;
-  color: $grayLight;
+  color: #bbb;
 }
 
 .stats {
@@ -145,15 +160,15 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $grayLight;
-    color: gray;
+    border-left: 1px solid #eeeeee;
+    color: #cccccc;
     &:first-child {
       padding-left: 0;
       border: 0;
     }
     &:hover {
       text-decoration: none;
-      color: $blue;
+      color: #0000ff;
     }
   }
   strong {
