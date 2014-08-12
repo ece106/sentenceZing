@@ -1,4 +1,7 @@
 class StaticPagesController < ApplicationController
+  layout :resolve_layout
+
+
   def home
     if signed_in?
       @micropost  = current_user.microposts.build
@@ -14,4 +17,16 @@ class StaticPagesController < ApplicationController
 
   def show
   end
+
+  def termsofservice
+  end
+
+    def resolve_layout
+      case action_name
+      when 'termsofservice'
+        'emptyshow'
+      else
+        'application'
+      end
+    end
 end
