@@ -32,6 +32,7 @@ Teamawesome::Application.routes.draw do
   match '/survey', to: 'static_pages#survey', via: 'get'
   match '/donations', to: 'static_pages#donations', via: 'get'
   match '/howtoplay', to: 'static_pages#howtoplay', via: 'get'
+  match '/termsofservice', to: 'static_pages#termsofservice', via: 'get'
   match '/voting', to: 'stories#voting', via: 'get'
 
   match '/stories/:id/fake', to: 'stories#fake', via: 'get'
