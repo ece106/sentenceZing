@@ -541,3 +541,12 @@ Thu Aug 7, 2014
 Implemented Bootstrap updates
 
 
+Mon Aug 11, 2014
+Skype call to finalize Operating Agreement, debug Windows nodejs problem
+
+
+Tue Aug 12, 2014
+Compared TOS to TOS for other sites
+Skype call to work on bootstrap CSS, notifications
+
+
