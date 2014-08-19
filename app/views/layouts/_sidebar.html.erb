@@ -1,0 +1,23 @@
+
+<% if signed_in? && !(current_page?(root_path)) %>
+<sidebar class>
+  
+  <center>
+    <% if current_user.image.present? && current_user.image != "" %>
+      <%= image_tag(current_user.image, :size => "80x80") %> 
+    <% else %>
+      <%= image_tag "default_profile.jpg", :size => "80x80" %>
+    <% end %>
+  
+  <br/><br/>
+  
+    <strong>Username: </strong> <%= current_user.name %>  <br>
+    <strong>SentenceZings: </strong> <%= current_user.microposts.count %>  <br>
+    <a href="<%= following_user_path(current_user) %>">
+    <strong> <%= current_user.followed_users.count %> </strong> following </a>
+    <a href="<%= followers_user_path(current_user) %>">
+    <strong> <%= current_user.followers.count %> </strong> followers <br>
+  </center>
+  
+</sidebar>
+<% end %>

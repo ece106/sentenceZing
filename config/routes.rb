@@ -34,8 +34,8 @@ Teamawesome::Application.routes.draw do
   match '/howtoplay', to: 'static_pages#howtoplay', via: 'get'
   match '/termsofservice', to: 'static_pages#termsofservice', via: 'get'
   match '/voting', to: 'stories#voting', via: 'get'
+  match '/notifications', to: 'activities#notifications', via: 'get'
 
-  match '/stories/:id/fake', to: 'stories#fake', via: 'get'
   match '/stories/:id/postbox', to: 'stories#postbox', via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.

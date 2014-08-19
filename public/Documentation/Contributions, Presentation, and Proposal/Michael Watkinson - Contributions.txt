@@ -129,3 +129,16 @@ Improve current js
   Added post button disable when over character limit
   removed stripe coffeescript that was running in the background
 Added user pictures to story edit and show pages
+
+Week of August 11th, 2014
+Fixed new Bootstrap issue
+Wrote Terms of Service Draft
+Created Terms of Service webpage and shadowbox popup on new user page
+Created checkbox required on new user page and added validation in model
+Started new notification feature
+
+Week of August 18th, 2014
+Reviewed changes to Terms of Service
+Continued work on new notification system
+Created a simple sidebar.  
+Made some simple logic to not display sidebar if not logged in and if on homepage

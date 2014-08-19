@@ -9,6 +9,7 @@ $grayMediumLight: #eaeaea;
 
 html {
   overflow-y: scroll;
+  width: 100%;
 }
 
 body {
@@ -96,6 +97,8 @@ p {
 /* footer */
 
 footer {
+  height: 5%;
+  width: 100%;
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
@@ -174,4 +177,15 @@ aside {
   strong {
     display: block;
   }
+}
+
+sidebar { 
+  float:left; 
+  width:200px; 
+  min-height: 600px;
+  background-color: #BDD3FF;
+  }
+  
+fb-root {
+  float: right;
 }
