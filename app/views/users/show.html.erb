@@ -30,10 +30,8 @@
           Offline
         <% end %> <br>
         <strong>SentenceZings: </strong> <%= @user.microposts.count %>  <br>
-        <a href="<%= following_user_path(@user) %>">
-        <strong> <%= @user.followed_users.count %> </strong> following </a>
-        <a href="<%= followers_user_path(@user) %>">
-        <strong> <%= @user.followers.count %> </strong> followers <br>
+        <strong> <%= @user.followed_users.count %> <%= link_to 'following', following_user_path(@user) %></strong> 
+        <strong> <%= @user.followers.count %> <%= link_to 'followers', followers_user_path(@user) %></strong> <br>
         <%= render 'follow_form' if signed_in? %>
       </div>
     </div>
