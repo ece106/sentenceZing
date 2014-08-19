@@ -61,14 +61,6 @@ ActiveRecord::Schema.define(version: 20140813004357) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
-  create_table "sessions", force: true do |t|
-    t.string   "new"
-    t.string   "create"
-    t.string   "destroy"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "stories", force: true do |t|
     t.string   "title"
     t.string   "category"
@@ -94,6 +86,7 @@ ActiveRecord::Schema.define(version: 20140813004357) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "remember_token"
     t.string   "password_digest"
     t.string   "name"
     t.string   "permalink"
@@ -101,7 +94,6 @@ ActiveRecord::Schema.define(version: 20140813004357) do
     t.text     "aboutme"
     t.string   "image"
     t.string   "banner"
-    t.string   "remember_token"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"
