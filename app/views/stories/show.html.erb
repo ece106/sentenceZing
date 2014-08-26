@@ -2,7 +2,10 @@
   <div class="storyshow" data-story-id="<%=@story.id %>" >
     <h1><%= @story.title %></h1>
     <h2><%= @story.category %></h2>
-    by <%= User.find(@story.user_id).name %> and <%= User.find(@story.user2id).name %>
+    by <%= User.find(@story.user_id).name %> and 
+    <% if !(User.find(@story.user2id).name == nil ) %>
+      <%= User.find(@story.user2id).name %>
+    <% end if %>
     <br/><br/>
   
     <% if @story.microposts.any? %>
