@@ -569,3 +569,7 @@ Analyzed Facebook, LibraryThing, WattPad TOSs and put relevant provisions in Sen
 Tue Aug 19, 2014
 Final draft of TOS before consulting a lawyer
 Deleted Sessions table
+
+
+Mon Aug 25, 2014
+Put bootstrap grid in signup page

@@ -72,6 +72,15 @@ p {
 
 /* header */
 
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+
 #logo 
 {
   float: left;
@@ -99,7 +108,6 @@ p {
 footer {
   height: 5%;
   width: 100%;
-  margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   color: black;
@@ -118,6 +126,7 @@ footer {
     li {
       float: left;
       margin-left: 10px;
+      margin-right: 10px;
     }
   }
 }
@@ -182,6 +191,6 @@ aside {
 sidebar { 
   float:left; 
   width:200px; 
-  min-height: 600px;
+  min-height: 450px;
   background-color: #BDD3FF;
   }
