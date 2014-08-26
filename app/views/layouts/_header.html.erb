@@ -7,8 +7,7 @@
           <li><%= link_to "Users", users_path %></li>
           <% if signed_in? %>
             <li><%= link_to "New Story", new_story_path %></li>
-            <li><%= link_to "Stories", stories_path %></li>
-            <li><%= link_to("Voting", voting_path, 'data-no-turbolink' => true) %></li>
+            <li><%= link_to("Stories", stories_path, 'data-no-turbolink' => true) %></li>
             <li><%= link_to "Notifications", activities_path %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">

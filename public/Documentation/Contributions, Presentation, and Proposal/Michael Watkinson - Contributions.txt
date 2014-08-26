@@ -142,3 +142,11 @@ Reviewed changes to Terms of Service
 Continued work on new notification system
 Created a simple sidebar.  
 Made some simple logic to not display sidebar if not logged in and if on homepage
+Reviewed some new bootstrap CSS changes
+
+Week of August 25th, 2014
+Worked on CSS formatting issues
+Fixed button problem on homepage
+Fixed link from sidebar not ended and making whole page a link to the user page 
+Combined stories index and voting page into one
+

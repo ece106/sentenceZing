@@ -6,16 +6,16 @@
         
 <% if signed_in? %>
   <div class="row">
-  	<%= link_to "Learn How to Play!", howtoplay_path, class: "btn btn-large" %>
+  	<%= link_to "Learn How to Play!", howtoplay_path, class: "btn btn-default" %>
   	&nbsp;
-    <%= link_to "Start a Story!", new_story_path, class: "btn btn-large" %>
+    <%= link_to "Start a Story!", new_story_path, class: "btn btn-default" %>
     &nbsp;
-    <%= link_to "Join or Read a Story!", stories_path, class: "btn btn-large" %>
+    <%= link_to "Join or Read a Story!", stories_path, class: "btn btn-default" %>
   </div>
 <% else %>
   <div class="center hero-unit">
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-large" %>
-    <%= link_to "Sign in!", signin_path, class: "btn btn-large" %>
+    <%= link_to "Sign up now!", signup_path, class: "btn btn-default" %>
+    <%= link_to "Sign in!", signin_path, class: "btn btn-default" %>
   </div>
 <% end %>
 

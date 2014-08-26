@@ -1,22 +1,26 @@
-<h1>Listing stories</h1>
+<h1>Stories</h1>
 
 <table>
   <thead>
     <tr>
       <th>Title</th>
-      <th></th>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
       <th>Category</th>
-      <th></th>
-      <th></th>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <th>Action</th>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <th>Likes</th>
     </tr>
   </thead>
 
-<tbody>
+  <tbody>
     <% @stories.each do |story| %>
       <tr>
         <td>
           <% if story.microposts.any? %>
-            <%= link_to story.title, edit_story_path(story), :title => story.microposts.first.content %>
+            <%= link_to(story.title, story_path(story), :rel => 'shadowbox[stories];width=1300;height=600;') %>
           <% else %>
             <%= story.title %>
           <% end %>
@@ -29,19 +33,23 @@
           <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
           <td><%= link_to 'Edit Story', edit_story_path(story) %></td>
         <% elsif story.user2id == nil || story.user2id == 0 %>
-          <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td>
-            <%= form_for(story) do |f| %>
-              <%= f.hidden_field :user2id, :value => 0 %>
-              <%= f.submit 'Join Story' %>
-            <% end %>
-          </td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>
+          <%= form_for(story) do |f| %>
+            <%= f.hidden_field :user2id, :value => 0 %>
+            <%= f.submit 'Join Story' %>
+          <% end %>
+        </td>
         <% else %>    
           <td><%= link_to 'Read Story', edit_story_path(story) %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
         <% end %>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td><%= Like.where(:story_id => story.id).count %> Likes </td>
+        
       </tr>
     <% end %>
-</tbody>
+  </tbody>
 </table>
 
 <br>
