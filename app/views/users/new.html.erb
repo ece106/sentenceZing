@@ -1,45 +1,50 @@
 <% provide(:title,'Signup') %>
 <center><h1>New user Registration</h1>
-
-<div class="row">
-  <div class="span6 offset3">
+</center>
       <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
-        <table>
-        <tr><td>
+  <div class="row" style="margin-top:10px;">
+    <div class="col-md-1 col-md-offset-4 col-sm-2 col-sm-offset-3 col-xs-3 col-xs-offset-1 ">
           <%= f.label :name, "Username" %>
+    </div>
+    <div class="col-md-2 col-sm-3 col-xs-4 ">
           <%= f.text_field :name %>
-        </td></tr>
-        <br/>
-        <tr><td>
+    </div>
+  </div>
+  <div class="row" style="margin-top:10px;">
+    <div class="col-md-1 col-md-offset-4 col-sm-2 col-sm-offset-3 col-xs-3 col-xs-offset-1 ">
           <%= f.label :email %>
+    </div>
+    <div class="col-md-2 col-sm-3 col-xs-4 ">
           <%= f.text_field :email %>
-        </td></tr>
-        <br/>
-        <tr><td>
+    </div>
+  </div>
+  <div class="row" style="margin-top:10px;">
+    <div class="col-md-1 col-md-offset-4 col-sm-2 col-sm-offset-3 col-xs-3 col-xs-offset-1 ">
           <%= f.label :password %>
+    </div>
+    <div class="col-md-2 col-sm-3 col-xs-4 ">
           <%= f.password_field :password %>
-        </td></tr>
-        <br/>
-        <tr><td>
+    </div>
+  </div>
+  <div class="row" style="margin-top:10px;">
+    <div class="col-md-1 col-md-offset-4 col-sm-2 col-sm-offset-3 col-xs-3 col-xs-offset-1 ">
           <%= f.label :password_confirmation, "Confirmation" %>
+    </div>
+    <div class="col-md-2 col-sm-3 col-xs-4 ">
           <%= f.password_field :password_confirmation %>
-        </td></tr>
-        <br/>
-        <tr><td>
+    </div>
+  </div>
+
+  <div class="row" style="margin-top:10px;">
+    <div class="col-md-12 col-sm-12 col-xs-12 ">
           <%= f.check_box :terms_of_service %>
           <%= f.label :terms_of_service, "I agree to the SentenceZing " %>
           <%= link_to("Terms of Service", termsofservice_path, :rel => 'shadowbox[static_pages];width=1300;height=600;') %>
-        </td></tr>
         <br/>
-        <tr><td>
         <center><%= f.submit "Create my account", class: "btn btn-large btn-primary" %> </center>
-        </td></tr>
-        </table>
       <% end %>
   </div>
 </div>
 
-  <%= link_to 'Back', users_path %>
-  </center>
   

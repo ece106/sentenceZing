@@ -563,6 +563,9 @@ Analyzed SmartBear, YouTube TOS
 
 
 Mon Aug 18, 2014
-Analyzed Facebook TOS and put relevant provisions in SentenceZing TOS
+Analyzed Facebook, LibraryThing, WattPad TOSs and put relevant provisions in SentenceZing TOS
 
 
+Tue Aug 19, 2014
+Final draft of TOS before consulting a lawyer
+Deleted Sessions table
