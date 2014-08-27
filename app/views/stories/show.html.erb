@@ -1,13 +1,16 @@
 <center> 
-  <div class="storyshow" data-story-id="<%=@story.id %>" >
-    <h1><%= @story.title %></h1>
-    <h2><%= @story.category %></h2>
-    by <%= User.find(@story.user_id).name %>
-    <% if @story.user2id != nil %>
-      and <%= User.find(@story.user2id).name %>
-    <% end %>
-    <br/><br/>
-  
+  <div class="row" >
+    <div class="col-md-12" >
+      <div class="storyshow" data-story-id="<%=@story.id %>" >
+      <h1><%= @story.title %></h1>
+      <h2><%= @story.category %></h2>
+      by <%= User.find(@story.user_id).name %>
+      <% if @story.user2id != nil %>
+        and <%= User.find(@story.user2id).name %>
+      <% end %>
+      <br/><br/>
+    </div>
+ 
     <% if @story.microposts.any? %>
       <%= render 'shared/feed' %>
     <% end %>
@@ -17,7 +20,9 @@
     <% @story = @story.id %>
     <%= render 'shared/likes_form' %>
   
-    <br/> <br/>
+      <br/> <br/>
+      </div>
+    </div>
   </div>
 </center>
  
