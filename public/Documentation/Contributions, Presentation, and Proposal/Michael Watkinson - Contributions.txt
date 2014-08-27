@@ -150,4 +150,4 @@ Fixed button problem on homepage
 Fixed link from sidebar not ended and making whole page a link to the user page 
 Combined stories index and voting page into one
 Fixed error on show page if story didn't have a second user
-
+Added bootstrap and made minor CSS changes to multiple pages
