@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813004357) do
+ActiveRecord::Schema.define(version: 20140911004930) do
 
   create_table "activities", force: true do |t|
     t.integer  "trackable_id"
@@ -24,7 +24,6 @@ ActiveRecord::Schema.define(version: 20140813004357) do
     t.string   "recipient_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.datetime "last_seen"
   end
 
   add_index "activities", ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type"
@@ -61,6 +60,14 @@ ActiveRecord::Schema.define(version: 20140813004357) do
   add_index "relationships", ["follower_id", "followed_id"], name: "index_relationships_on_follower_id_and_followed_id", unique: true
   add_index "relationships", ["follower_id"], name: "index_relationships_on_follower_id"
 
+  create_table "sessions", force: true do |t|
+    t.string   "new"
+    t.string   "create"
+    t.string   "destroy"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "stories", force: true do |t|
     t.string   "title"
     t.string   "category"
@@ -86,7 +93,6 @@ ActiveRecord::Schema.define(version: 20140813004357) do
     t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "remember_token"
     t.string   "password_digest"
     t.string   "name"
     t.string   "permalink"
@@ -94,6 +100,8 @@ ActiveRecord::Schema.define(version: 20140813004357) do
     t.text     "aboutme"
     t.string   "image"
     t.string   "banner"
+    t.string   "remember_token"
+    t.integer  "last_seen"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"

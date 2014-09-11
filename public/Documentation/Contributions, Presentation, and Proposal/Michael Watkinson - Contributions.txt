@@ -151,3 +151,9 @@ Fixed link from sidebar not ended and making whole page a link to the user page
 Combined stories index and voting page into one
 Fixed error on show page if story didn't have a second user
 Added bootstrap and made minor CSS changes to multiple pages
+
+Week of September 8th, 2014
+Added notifications into header as a dynamically created drop down menu
+Move last seen variable from notifications table to users table in database
+Got updating last seen variable to work when drop down is selected from header
+

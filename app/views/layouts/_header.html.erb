@@ -8,7 +8,47 @@
           <% if signed_in? %>
             <li><%= link_to "New Story", new_story_path %></li>
             <li><%= link_to("Stories", stories_path, 'data-no-turbolink' => true) %></li>
-            <li><%= link_to "Notifications", activities_path %></li>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Notifications: 
+              <% @activities = PublicActivity::Activity.order('created_at desc').paginate(page: params[:page]) %>
+              <%= @activities.where("id > ?", current_user.last_seen).count %>
+              <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu" style="width:450px">
+                <% counter = 0 %>
+                <% lastSeenActivity = 0 %>
+                <div class="activity">
+                <% @activities.each do |activity| %>
+                  <% if activity.trackable_type == "Micropost"%>
+                    <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) || current_user != activity.owner %>
+                       <% counter = counter + 1 %>
+                       <li>
+                      <% if activity.owner.name == current_user.name %>
+                        <%= link_to "You", activity.owner %>
+                      <% else %>
+                        <%= link_to activity.owner.name, activity.owner if activity.owner %>
+                      <% end %>
+                      added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %>
+                    <% else %>
+                    which has since been removed 
+                  <% end %>
+                  <% if counter == 1 %>
+                    <% lastSeenActivity == activity.id %>
+                  <% end %>
+                <% end %>
+                </li>
+				<li class="divider"></li>
+				<li class="divider"></li>
+              <% if counter == 8 %>
+                <% current_user.update_attribute(:last_seen, lastSeenActivity) %>
+                <% break %>
+              <% end %>
+            <% end %>
+            </div> 
+            <li><%= link_to "See All", activities_path %></li>
+            </ul>
+            </li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Account <b class="caret"></b>
