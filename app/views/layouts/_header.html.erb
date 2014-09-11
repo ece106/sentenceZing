@@ -18,7 +18,7 @@
               <ul class="dropdown-menu" style="width:450px">
                 <% counter = 0 %>
                 <% lastSeenActivity = 0 %>
-                <div class="activity">
+                <center> <div>
                 <% @activities.each do |activity| %>
                   <% if activity.trackable_type == "Micropost"%>
                     <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) || current_user != activity.owner %>
@@ -37,16 +37,16 @@
                     <% lastSeenActivity == activity.id %>
                   <% end %>
                 <% end %>
+                <br/><hr noshade>
                 </li>
-				<li class="divider"></li>
-				<li class="divider"></li>
               <% if counter == 8 %>
                 <% current_user.update_attribute(:last_seen, lastSeenActivity) %>
                 <% break %>
               <% end %>
             <% end %>
-            </div> 
+            <br/>
             <li><%= link_to "See All", activities_path %></li>
+            </div> </center>
             </ul>
             </li>
             <li id="fat-menu" class="dropdown">
