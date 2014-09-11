@@ -18,7 +18,7 @@
               <ul class="dropdown-menu" style="width:450px">
                 <% counter = 0 %>
                 <% lastSeenActivity = 0 %>
-                <center> <div>
+                <div>
                 <% @activities.each do |activity| %>
                   <% if activity.trackable_type == "Micropost"%>
                     <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) || current_user != activity.owner %>
@@ -46,7 +46,7 @@
             <% end %>
             <br/>
             <li><%= link_to "See All", activities_path %></li>
-            </div> </center>
+            </div>
             </ul>
             </li>
             <li id="fat-menu" class="dropdown">
