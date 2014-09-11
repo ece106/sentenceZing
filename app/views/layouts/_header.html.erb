@@ -36,8 +36,8 @@
                   <% if counter == 1 %>
                     <% lastSeenActivity == activity.id %>
                   <% end %>
+                  <br/><hr noshade>
                 <% end %>
-                <br/><hr noshade>
                 </li>
               <% if counter == 8 %>
                 <% current_user.update_attribute(:last_seen, lastSeenActivity) %>
