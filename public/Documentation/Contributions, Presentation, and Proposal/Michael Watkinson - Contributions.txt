@@ -158,3 +158,11 @@ Move last seen variable from notifications table to users table in database
 Got updating last seen variable to work when drop down is selected from header
 Fixed formatting in notification dropdown
 Added notification count and last seen updating (needs to be fixed)
+
+Week of September 15th, 2014
+Fixed Notifications count
+Fixed updating last seen variable and limiting notifications to only activities they are not the owner of
+Changed Edit Story to Your Turn and Waiting for the Stories index page
+Planned out future kickstarter features
+Worked on solving the notifications being reset on each page load problem
+Added profile pictures to the users index

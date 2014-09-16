@@ -12,42 +12,37 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Notifications: 
               <% @activities = PublicActivity::Activity.order('created_at desc').paginate(page: params[:page]) %>
-              <%= @activities.where("id > ?", current_user.last_seen).count %>
+              <%= @activities.where("id > ? AND owner_id != ?", current_user.last_seen, current_user).count %>
               <b class="caret"></b>
               </a>
               <ul class="dropdown-menu" style="width:450px">
                 <% counter = 0 %>
                 <% lastSeenActivity = 0 %>
                 <div>
-                <% @activities.each do |activity| %>
-                  <% if activity.trackable_type == "Micropost"%>
-                    <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) || current_user != activity.owner %>
-                       <% counter = counter + 1 %>
-                       <li>
-                      <% if activity.owner.name == current_user.name %>
-                        <%= link_to "You", activity.owner %>
-                      <% else %>
-                        <%= link_to activity.owner.name, activity.owner if activity.owner %>
+                  <% @activities.each do |activity| %>
+                    <% if activity.trackable_type == "Micropost"%>
+                      <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
+                        <% counter = counter + 1 %>
+                        <% if activity.id > lastSeenActivity %>
+                          <% lastSeenActivity = activity.id %>
+                          <% current_user.update_attribute(:last_seen, lastSeenActivity) %>
+                        <% end %>
+                        <li>
+                          &nbsp;&nbsp;
+                          <%= link_to activity.owner.name, activity.owner if activity.owner %>
+                          added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %>
+                          <br/><hr noshade>
                       <% end %>
-                      added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %>
-                    <% else %>
-                    which has since been removed 
+                    <% end %>
+                    </li>
+                    <% if counter == 8 %>
+                      <% break %>
+                    <% end %>
                   <% end %>
-                  <% if counter == 1 %>
-                    <% lastSeenActivity == activity.id %>
-                  <% end %>
-                  <br/><hr noshade>
-                <% end %>
-                </li>
-              <% if counter == 8 %>
-                <% current_user.update_attribute(:last_seen, lastSeenActivity) %>
-                <% break %>
-              <% end %>
-            <% end %>
-            <br/>
-            <li><%= link_to "See All", activities_path %></li>
-            </div>
-            </ul>
+                  <br/>
+                  <li><%= link_to "See All", activities_path %></li>
+                </div>
+              </ul>
             </li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">

@@ -31,7 +31,11 @@
         
         <% if current_user.id == story.user_id || current_user.id == story.user2id %>
           <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-          <td><%= link_to 'Edit Story', edit_story_path(story) %></td>
+          <% if current_user.id == story.turn %>
+            <td><%= link_to 'Waiting', edit_story_path(story) %></td>
+          <% else%>
+            <td><%= link_to 'Your Turn', edit_story_path(story) %></td>
+          <% end %>
         <% elsif story.user2id == nil || story.user2id == 0 %>
         <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
         <td>
