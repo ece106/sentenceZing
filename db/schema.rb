@@ -100,10 +100,7 @@ ActiveRecord::Schema.define(version: 20140911004930) do
     t.text     "aboutme"
     t.string   "image"
     t.string   "banner"
-    t.string   "remember_token"
     t.integer  "last_seen"
   end
-
-  add_index "users", ["remember_token"], name: "index_users_on_remember_token"
 
 end

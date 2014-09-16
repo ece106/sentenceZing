@@ -573,3 +573,21 @@ Deleted Sessions table
 
 Mon Aug 25, 2014
 Put bootstrap grid in signup page
+
+
+Tue Aug 26, 2014
+Jiggered users#show bootstrap 
+
+
+Tue Sep 9, 2014
+Reviewed material for unit testing
+
+
+Wed Sep 10, 2014
+Experimented with Rspec testing for notifications
+
+
+Mon Sep 15, 2014
+Reviewed Minitest 
+Edited Stories#index for bootstrap columns
+Helped Michael debug notifications

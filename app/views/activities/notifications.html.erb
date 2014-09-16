@@ -1,6 +1,6 @@
 <center>
 
-    
+    Test stuff
 
     <% counter = 0 %>
     <% @activities.each do |activity| %>
@@ -13,13 +13,13 @@
                 <% else %>
                     <%= link_to activity.owner.name, activity.owner if activity.owner %>
                 <% end %>
-                added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %>
+                added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %> <%= activity.created_at %> 
             <% else %>
                 which has since been removed 
             <% end %>
         <% end %>
         </div>
-        <% if counter = 10 %>
+        <% if counter == 10 %>
             <% break %>
         <% end %>
     <% end %>
