@@ -1,6 +1,5 @@
 <h1>Notification Feed</h1>
 <center>
-<% i=0 %>
 <% @activities.each do |activity| %>
       <% if activity.trackable_type == "Story"%>
         <% if current_user.following?(activity.owner) || (current_user.id == activity.trackable.user_id || current_user.id == activity.trackable.user2id) || current_user == activity.owner %>
@@ -15,7 +14,7 @@
           <% elsif activity.key == "story.update" %>
             joined the story 
           <% end %>
-          <%= link_to activity.trackable.title, edit_story_path(activity.trackable) %> <%= activity.created_at %> 
+          <%= link_to activity.trackable.title, edit_story_path(activity.trackable) %> <%= activity.created_at.strftime("%A %B %d, %Y at %I:%M %p") %> 
         <% end %>
       
       <% elsif activity.trackable_type == "Micropost"%>
@@ -26,12 +25,11 @@
           <% else %>
             <%= link_to activity.owner.name, activity.owner if activity.owner %>
           <% end %>
-            added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %> <%= activity.created_at %> 
+            added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %> <%= activity.created_at.strftime("%A %B %d, %Y at %I:%M %p") %> 
         <% end %>
       <% else %>
         which has since been removed 
       <% end %>
-    <%= i=i+1 %>  
   </div>
 <% end %>
 </center>
