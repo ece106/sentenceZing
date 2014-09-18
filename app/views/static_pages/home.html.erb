@@ -14,7 +14,7 @@
   </div>
 <% else %>
   <div class="center hero-unit">
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-default" %>
+    <%= link_to "Sign up now!", signup_path, 'data-no-turbolink' => true, class: "btn btn-default" %>
     <%= link_to "Sign in!", signin_path, class: "btn btn-default" %>
   </div>
 <% end %>
