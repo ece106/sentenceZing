@@ -591,3 +591,10 @@ Mon Sep 15, 2014
 Reviewed Minitest 
 Edited Stories#index for bootstrap columns
 Helped Michael debug notifications
+
+
+Wed Sep 17, 2014
+Refined stories#index colums
+Tried to find heroku CSS error
+Tried to figure out why Notifications counter & dropdown acting strangely for 1 of the test users
+
