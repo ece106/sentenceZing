@@ -71,3 +71,4 @@ gem 'public_activity'
 gem 'carrierwave'
 gem "fog", "~> 1.3.1"
 gem 'shadowbox-rails'
+gem 'mailboxer'

@@ -1,10 +1,9 @@
 class User < ActiveRecord::Base
-  # added line of code to for listing 11.4
   has_many :microposts, dependent: :destroy
   has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   has_many :followed_users, through: :relationships, source: :followed
+  acts_as_messageable
  
-  # listing 11.16 
   has_many :reverse_relationships, foreign_key: "followed_id",
                                    class_name:  "Relationship",
                                    dependent:   :destroy
