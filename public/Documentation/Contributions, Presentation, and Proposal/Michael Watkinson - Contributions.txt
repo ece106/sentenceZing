@@ -166,3 +166,12 @@ Changed Edit Story to Your Turn and Waiting for the Stories index page
 Planned out future kickstarter features
 Worked on solving the notifications being reset on each page load problem
 Added profile pictures to the users index
+Worked on adding Mailboxer messaging into the site.
+Made Users messageable, added controllers, and views
+Brainstormed new story game modes
+
+Week of September 22nd, 2014
+Worked on adding messaging with mailboxer gem
+Planned Sentencezing as education tool
+Fixed notification count query to only include stories current user is a part of
+Changed Account drop down on header to say current user name
