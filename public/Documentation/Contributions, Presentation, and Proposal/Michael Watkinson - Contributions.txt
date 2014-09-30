@@ -175,3 +175,8 @@ Worked on adding messaging with mailboxer gem
 Planned Sentencezing as education tool
 Fixed notification count query to only include stories current user is a part of
 Changed Account drop down on header to say current user name
+
+Week of September 29th, 2014
+Successfully set up pages for mailboxer gem
+Created new pages for inbox, conversations, trash, and sent
+Verified that messaging is working based on user email as recipient

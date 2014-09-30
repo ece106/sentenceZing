@@ -26,6 +26,23 @@ Teamawesome::Application.routes.draw do
   resources :likes
   resources :subscriptions
   resources :activities
+  
+  resources :messages do
+    member do
+      post :new
+    end
+  end
+  resources :conversations do
+    member do
+      post :reply
+      post :trash
+      post :untrash
+    end
+   collection do
+      get :trashbin
+      post :empty_trash
+   end
+  end
 
   match '/about', to: 'static_pages#about', via: 'get'
   match '/contactus', to: 'static_pages#contactus', via: 'get'

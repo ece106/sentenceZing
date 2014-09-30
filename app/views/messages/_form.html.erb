@@ -1,0 +1,12 @@
+<%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
+  <%= f.label :subject, "Subject" %>
+  <%= f.text_field :subject %>
+  <br/><br/>
+  
+  <%= f.label :body, "Body" %>
+  <%= f.text_area :body %>
+  <br/>
+  
+  <%= f.button :submit, class: 'btn-primary' %>
+  <%= submit_tag 'Cancel', type: :reset, class: 'btn btn-danger' %>
+<% end %>
