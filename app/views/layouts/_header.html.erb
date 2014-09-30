@@ -11,8 +11,19 @@
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               Notifications: 
-              <% @activities = PublicActivity::Activity.order('created_at desc').paginate(page: params[:page]) %>
-              <%= @activities.where("id > ? AND owner_id != ?", current_user.last_seen, current_user).count %>
+              <% @activities = PublicActivity::Activity.order('created_at desc') %>
+                <% numnotificatn = 0 %>
+                <% @activities.each do |activity| %>
+                    <% if activity.trackable_type == "Micropost"%>
+                      <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
+                        <% if activity.id > current_user.last_seen %>
+                          <% numnotificatn = numnotificatn + 1 %>
+                        <% end %>
+                      <% end %>
+                    <% end %>
+                <% end %>
+                <%= numnotificatn %>
+              <% #= @activities.where("id > ? AND owner_id != ?", current_user.last_seen, current_user).count # This was clever use of sql but counted notifications that didn't belong to current_user %>
               <b class="caret"></b>
               </a>
               <ul class="dropdown-menu" style="width:450px">

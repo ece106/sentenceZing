@@ -598,3 +598,10 @@ Refined stories#index colums
 Tried to find heroku CSS error
 Tried to figure out why Notifications counter & dropdown acting strangely for 1 of the test users
 
+
+Mon Sep 22, 2014
+Debugged heroku CSS problem
+
+
+Tue Sep 23, 2014
+Debugged Notifications count problem
