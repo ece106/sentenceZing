@@ -605,3 +605,12 @@ Debugged heroku CSS problem
 
 Tue Sep 23, 2014
 Debugged Notifications count problem
+
+
+Mon Sep 29, 2014
+Redesigned logic for Notifications count problem
+
+
+Tue Sep 30, 2014
+Reviewed functionality for mailboxer gem
+Got rid of password confirmation requirement for updating user
