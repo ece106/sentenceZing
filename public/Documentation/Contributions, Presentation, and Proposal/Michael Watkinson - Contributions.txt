@@ -180,3 +180,10 @@ Week of September 29th, 2014
 Successfully set up pages for mailboxer gem
 Created new pages for inbox, conversations, trash, and sent
 Verified that messaging is working based on user email as recipient
+Worked on Messaging format
+Looked into JS for notification drop down menu
+
+Week of October 6th, 2014
+Reformatted the conversation show page. It actually makes a little sense now!
+Looked into JS and Jquery formatting for the conversation index page
+Fixed problem with name being changed to email in model from mailboxer gem additions

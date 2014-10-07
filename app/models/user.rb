@@ -65,10 +65,6 @@ class User < ActiveRecord::Base
       like.save
     end
   end
-  
-  def name
-    email
-  end
 
   def mailboxer_email(object)
     email

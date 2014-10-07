@@ -1,9 +1,18 @@
 <h1> <%= conversation.subject %> </h1>
-<ul>
-  <%= content_tag_for(:li, conversation.receipts_for(current_user)) do |receipt| %>
+
+<table>
+  <%= content_tag_for(:tr, conversation.receipts_for(current_user)) do |receipt| %>
     <% message = receipt.message %>
-    <h3> <%= message.subject %> </h3>
-    <p> <%= message.body %> </p>
-    <%= render 'messages/form', conversation: conversation %>
+    <td> <%= message.body %> </td>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <% user = User.find(message.sender_id) %>
+    <td> <%= user.name %> </td>
+    <br/>
   <% end %>
-</ul>
+</table>
+
+<br/><br/>
+
+<%= render 'messages/form', conversation: conversation %>
+
+<br/><br/>
