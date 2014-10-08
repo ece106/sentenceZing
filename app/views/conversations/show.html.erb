@@ -1,15 +1,28 @@
 <h1> <%= conversation.subject %> </h1>
 
-<table>
+<div class="leftj" >
   <%= content_tag_for(:tr, conversation.receipts_for(current_user)) do |receipt| %>
     <% message = receipt.message %>
-    <td> <%= message.body %> </td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-    <% user = User.find(message.sender_id) %>
-    <td> <%= user.name %> </td>
+    <div class="row">
+      <div class="col-md-8 col-sm-7 col-xs-5" >
+        <%= message.body %> 
+      </div>
+        <% user = User.find(message.sender_id) %>
+      <div class="col-md-2 col-sm-3 col-xs-4" >
+  	  	<% if user.image.present? && user.image != "" %>
+  	  	  <%= link_to image_tag(user.image, :size => "30x30"), user %>  
+   	  	<% else %>
+   	  	  <%= link_to image_tag("default_profile.jpg", :size => "30x30"), user %> 
+        <% end %>
+        <%= user.name %> 
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-3" style= "line-height: 2em" >
+        <%= time_ago_in_words(message.created_at) %>
+      </div>
+    </div>
     <br/>
   <% end %>
-</table>
+</div>
 
 <br/><br/>
 

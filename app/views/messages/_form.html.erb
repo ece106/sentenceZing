@@ -1,10 +1,10 @@
 <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
-  <%= f.label :subject, "Subject" %>
-  <%= f.text_field :subject %>
+  <b>Subject</b>
+  <%= f.text_area :subject, :cols => 50, :rows => 1 %>
   <br/><br/>
   
-  <%= f.label :body, "Body" %>
-  <%= f.text_area :body %>
+  <b>Body </b>.
+  <%= f.text_area :body, :cols => 50, :rows => 3 %> <br> 
   <br/>
   
   <%= f.button :submit, class: 'btn-primary' %>

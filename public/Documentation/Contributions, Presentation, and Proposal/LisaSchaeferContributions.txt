@@ -614,3 +614,15 @@ Redesigned logic for Notifications count problem
 Tue Sep 30, 2014
 Reviewed functionality for mailboxer gem
 Got rid of password confirmation requirement for updating user
+
+
+Mon Oct 7, 2014
+Started SentenceZing Issues log, research typical Issues comments
+Started reformatting users#edit
+
+
+Tue Sep 30, 2014
+Formatted users#edit and users#index with Bootstrap and profile pics
+
+
+

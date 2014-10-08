@@ -45,9 +45,28 @@
         <b>Email </b>
       </div>
       <div class="col-md-5 col-sm-8 col-xs-9" >
-        <%= f.text_field :email  %> <br> 
+        <%= f.text_field :email  %> <br> <br> 
       </div>
     </div>
+
+    <div class="row">
+      <div class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-1 col-xs-3" >
+        <b>Change Password</b>
+      </div>
+      <div class="col-md-5 col-sm-8 col-xs-9" >
+        <%= f.password_field :password %> <br><br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-1 col-xs-3" >
+        <b>Confirm New Password</b>
+      </div>
+      <div class="col-md-5 col-sm-8 col-xs-9" >
+        <%= f.password_field :password_confirmation %> <br>
+      </div>
+    </div>
+
   </div>
   <br><%= f.submit "Update Profile", class: "btn btn-large btn-primary" %>
   <br><br><br>
