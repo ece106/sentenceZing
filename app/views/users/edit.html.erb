@@ -1,37 +1,54 @@
 <% provide(:title, "Profile") %>
 <h1>Profile</h1>
 
-<div class="row">
-  <div class="span6 offset3">
+<%= form_for @user, :html => {:multipart => true} do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="userinfo2">
+    <div class="row">
+      <div class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-1 col-xs-3" >
+        <b>Username</b>
+      </div>
+      <div class="col-md-5 col-sm-8 col-xs-9" >
+        <%= f.text_field :name %> <br><br>
+      </div>
+    </div>
 
-   <!-- Table for Profile info  -->
-            <!-- Form for entering profile info -->
-            <%= form_for @user, :html => {:multipart => true} do |f| %>
-               <%= render 'shared/error_messages', object: f.object %>
-                <table>
-                  <tr>
-                     <td>  <%= f.label :name, "Username" %>    </td>
-                     <td>  <%= f.text_field :name %>   </td>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-1 col-xs-3" >
+        <b>User Bio</b>
+      </div>
+      <div class="col-md-5 col-sm-8 col-xs-9" >
+        <%= f.text_area :aboutme, :cols => 50, :rows => 3, placeholder:  "About Me" %> <br> 
+      </div>
+    </div> 
 
-                     <td>  <%= f.label :aboutme, "User Bio" %>    </td>
-                     <td>  <%= f.text_area :aboutme, placeholder: "About Me" %>   </td>   
-                 </tr>
-                 <tr>
-                      <td>  <%= f.label "Profile Picture" %>   </td>
-                      <td> <%= f.file_field :image %>  </td>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-1 col-xs-3" >
+        <b>Profile Picture</b>
+      </div>
+      <div class="col-md-5 col-sm-8 col-xs-9" >
+        <%= f.file_field :image %> <br>
+      </div>
+    </div>
 		      
-                      <td>  <%= f.label "Banner" %>   </td>
-                      <td> <%= f.file_field :banner %>  </td>
-                 </tr>
-                 <tr>
-                      <td>  <%= f.label :email %>  </td>
-                      <td> <%= f.text_field :email  %>  </td>
-                </tr>
-                <tr>
-              </table> <!-- end of table for profile info  -->
-              <br />
-            <%= f.submit "Update Profile", class: "btn btn-large btn-primary" %>
-          <% end %> <!-- end of form for entering profile info -->
-<br><br>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-1 col-xs-3" >
+        <b>Banner</b>
+      </div>
+      <div class="col-md-5 col-sm-8 col-xs-9" >
+        <%= f.file_field :banner %> <br> 
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2 col-md-offset-3 col-sm-3 col-sm-offset-1 col-xs-3" >
+        <b>Email </b>
+      </div>
+      <div class="col-md-5 col-sm-8 col-xs-9" >
+        <%= f.text_field :email  %> <br> 
+      </div>
+    </div>
   </div>
-</div>
+  <br><%= f.submit "Update Profile", class: "btn btn-large btn-primary" %>
+  <br><br><br>
+<% end %> 
