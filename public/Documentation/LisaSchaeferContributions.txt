@@ -616,13 +616,38 @@ Reviewed functionality for mailboxer gem
 Got rid of password confirmation requirement for updating user
 
 
-Mon Oct 7, 2014
-Started SentenceZing Issues log, research typical Issues comments
+Mon Oct 6, 2014
+Started SentenceZing Issues log, researched typical Issues comments
 Started reformatting users#edit
 
 
-Tue Sep 30, 2014
-Formatted users#edit and users#index with Bootstrap and profile pics
+Tue Oct 7, 2014
+Formatted users#edit, users#index, and conversations#show with Bootstrap and profile pics
 
 
+Tue Oct 21, 2014
+Went over kickstarter campaign tasks
 
+
+Mon Oct 27, 2014
+Went over existing kickstarter campaigns
+Marketing brainstorm
+
+
+Tue Oct 28, 2014
+Brainstormed rewards and marketing
+
+
+Mon Nov 3, 2014
+Wrote draft rewards
+
+
+Tue Nov 4, 2014
+Went over rewards, video ideas
+
+
+Wed Nov 5, 2014
+Met with SCORE counselor to discuss Operating Agreement and other legal issues
+Recruited someone to give sentenceZing video testimonial 
+
+	
