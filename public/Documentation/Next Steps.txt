@@ -11,19 +11,19 @@ SentenceZing Next Steps
    2.2               Add more links to header, make them clearer and easier to see                                      Completed
    2.3               Footer links can't be seen when hovered over (CSS issue)                                           Completed
 
- 3                Refine story making process                                                                         (3/5)
+ 3                Refine story making process                                                                         (4/5)
    3.1               Only the two users who are part of the story can edit the page                                     Completed
    3.2               Only the person whose turn it is can type                                                          Completed
    3.3               Add either auto-refresh                                                                            Completed
    3.4               Page for old stories and page for stories made during the current week
-   3.5               Notification when the other user submits their sentence
+   3.5               Notification when the other user submits their sentence											Completed
 
  5                Friend/Following system                                                                             Completed...for now
    5.1               Create a friend system or find a suitable gem to add in                                            Postponed
    5.2               Create Follower/Following system                                                                   Completed
 
  5                Messaging system                                                                                    In Progress (1/3)
-   5.1               Create a messaging system or find a suitable gem to add in                                         Postponed
+   5.1               Create a messaging system or find a suitable gem to add in                                         In Progress
    5.2               Make the Contact Us page functional                                                                Postponed
    5.3               Added third part chat room to site (Chatango)                                                      Completed
    
@@ -36,8 +36,8 @@ SentenceZing Next Steps
    7.1              Reformat                                                                                            Completed
    7.2              instead of sentence contributions only link to stories they are a part of                           Completed
    
- 8                New User Creation                                                                                   (1/2)
-   8.1              Add Terms of Use checkbox before allowing new user account creation
+ 8                New User Creation                                                                                   Completed (2/2)
+   8.1              Add Terms of Use checkbox before allowing new user account creation									Completed
    8.2              Unique usernames                                                                                    Completed
    
  9                Voting                                                                                              Completed (4/4)

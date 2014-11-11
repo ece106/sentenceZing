@@ -1,19 +1,21 @@
 Conclusions
 
-Needs validation for microposts and javascript to show how many characters left
-Lock it so only the person whose turn it is can type
-Lock a story to only the set number of people and who are part of the story can edit the page
-Add messaging system. Make contact us page functional
-Add friend system
-Add links to the homepage in the signed in section
-Add more links to header, make them clearer and easier to see
-Footer links can't be seen when hovered over (CSS issue)
-Add either auto-refresh or a notifcation when a user has submitted their micropost in a story
-Format sentence contributions on user show page divided by story
-Stop edit user page from requiring password entry to submit changes
-Move Refresh button to beside the post button
-Have auto refresh, instead of refresh button
-Have messaging or chat feature
-Show profile picture beside username in edit and show story
-Add more pictures and color to the site
+Status         Alpha Tester Suggestions
+
+(Done)         Needs validation for microposts and javascript to show how many characters left
+(Done)         Lock it so only the person whose turn it is can type
+(Done)         Lock a story to only the set number of people and who are part of the story can edit the page
+(In Progress)  Add messaging system. 
+(In Progress)  Make contact us page functional
+(Done)         Add friend/following system
+(Done)         Add links to the homepage in the signed in section
+(Done)         Add more links to header, make them clearer and easier to see
+(Done)         Footer links can't be seen when hovered over (CSS issue)
+(Done)         Add either auto-refresh or a notifcation when a user has submitted their micropost in a story
+(Done)         Format sentence contributions on user show page divided by story
+(Done)         Stop edit user page from requiring password entry to submit changes
+(Obsolete)     Move Refresh button to beside the post button
+(Done)         Have auto refresh, instead of refresh button
+(Done)         Show profile picture beside username in edit and show story
+(Postponed)    Add more pictures and color to the site
 
