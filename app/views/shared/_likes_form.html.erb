@@ -1,8 +1,8 @@
 <div id="like_form">
-  <% if Like.where(:story_id => @story, :user_id => current_user.id).count == 0 %>
-    <%= render 'shared/like' %>
-  <% else %> 
-    <%= render 'shared/unlike' %>
-  <% end %>
+	<% if Like.where(:story_id => @story, :user_id => current_user.id).count == 0 %>
+		<%= render 'shared/like' %>
+  	<% else %> 
+    	<%= render 'shared/unlike' %>
+  	<% end %>
 </div>
   

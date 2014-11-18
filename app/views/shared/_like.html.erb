@@ -1,5 +1,5 @@
 <%= Like.where(:story_id => @story).count %> Likes
 <%= form_for(@like, :remote => true, :method => "create") do |f| %>  
-  <%= hidden_field :like, :story_id, :value => @story %>
-  <%= f.submit 'Like', class: "btn btn-small" %>
+	<%= hidden_field :like, :story_id, :value => @story %>
+  	<%= f.submit 'Like', class: "btn btn-small" %>
 <% end %>

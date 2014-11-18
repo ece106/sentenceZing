@@ -1,76 +1,85 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-      <%= link_to "SentenceZing", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Users", users_path %></li>
-          <% if signed_in? %>
-            <li><%= link_to "New Story", new_story_path %></li>
-            <li><%= link_to("Stories", stories_path, 'data-no-turbolink' => true) %></li>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Notifications: 
-              <% @activities = PublicActivity::Activity.order('created_at desc') %>
-                <% numnotificatn = 0 %>
-                <% @activities.each do |activity| %>
-                    <% if activity.trackable_type == "Micropost"%>
-                      <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
-                        <% if activity.id > current_user.last_seen %>
-                          <% numnotificatn = numnotificatn + 1 %>
+    <div class="navbar-inner">
+        <%= link_to "SentenceZing", root_path, id: "logo" %>
+        <nav>
+            <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "Users", users_path %></li>
+                <% if signed_in? %>
+                    <li><%= link_to "New Story", new_story_path %></li>
+                    <li><%= link_to("Stories", stories_path, 'data-no-turbolink' => true) %></li>
+                    <li id="fat-menu" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Notifications: 
+                        <% @activities = PublicActivity::Activity.order('created_at desc') %>
+                        <% numnotificatn = 0 %>
+                        <% @activities.each do |activity| %>
+                            <% if activity.trackable_type == "Micropost"%>
+                      
+                                <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
+                        
+                                    <% if activity.id > current_user.last_seen %>
+                                        <% numnotificatn = numnotificatn + 1 %>
+                                    <% end %>
+                                
+                                <% end %>
+                            
+                            <% end %>
+                        
                         <% end %>
-                      <% end %>
-                    <% end %>
-                <% end %>
-                <%= numnotificatn %>
-              <% #= @activities.where("id > ? AND owner_id != ?", current_user.last_seen, current_user).count # This was clever use of sql but counted notifications that didn't belong to current_user %>
-              <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu" style="width:450px">
-                <% counter = 0 %>
-                <% lastSeenActivity = 0 %>
-                <div>
-                  <% @activities.each do |activity| %>
-                    <% if activity.trackable_type == "Micropost"%>
-                      <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
-                        <% counter = counter + 1 %>
-                        <% if activity.id > lastSeenActivity %>
-                          <% lastSeenActivity = activity.id %>
-                          <% current_user.update_attribute(:last_seen, lastSeenActivity) %>
-                        <% end %>
-                        <li>
-                          &nbsp;&nbsp;
-                          <%= link_to activity.owner.name, activity.owner if activity.owner %>
-                          added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %>
-                          <br/><hr noshade>
-                      <% end %>
-                    <% end %>
+                    <%= numnotificatn %>
+                    <% #= @activities.where("id > ? AND owner_id != ?", current_user.last_seen, current_user).count # This was clever use of sql but counted notifications that didn't belong to current_user %>
+                    <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" style="width:450px">
+                        <% counter = 0 %>
+                        <% lastSeenActivity = 0 %>
+                        <div>
+                            <% @activities.each do |activity| %>
+                                <% if activity.trackable_type == "Micropost"%>
+                                
+                                    <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
+                                        <% counter = counter + 1 %>
+                                        
+                                        <% if activity.id > lastSeenActivity %>
+                                            <% lastSeenActivity = activity.id %>
+                                            <% current_user.update_attribute(:last_seen, lastSeenActivity) %>
+                                        <% end %>
+                                        <li>
+                                        &nbsp;&nbsp;
+                                        <%= link_to activity.owner.name, activity.owner if activity.owner %>
+                                        added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %>
+                                        <br/><hr noshade>
+                                    <% end %>
+                                    
+                                <% end %>
+                                </li>
+                                <% if counter == 8 %>
+                                    <% break %>
+                                <% end %>
+                                
+                            <% end %>
+                            <br/>
+                            <li><%= link_to "See All", activities_path %></li>
+                        </div>
+                    </ul>
                     </li>
-                    <% if counter == 8 %>
-                      <% break %>
-                    <% end %>
-                  <% end %>
-                  <br>
-                  <li><%= link_to "See All", activities_path %></li>
-                </div>
-              </ul>
-            </li>
-            <li><%= link_to "Inbox", conversations_path %></li>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <%= current_user.name %> <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
-              </ul>
-            </li>
-          <% else %> 
-            <li><%= link_to "Sign in", signin_path %></li>
-          <% end %>
-        </ul>
-      </nav>
-  </div>
+                    <li><%= link_to "Inbox", conversations_path %></li>
+                    <li id="fat-menu" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <%= current_user.name %> <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><%= link_to "Profile", current_user %></li>
+                            <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
+                            <li class="divider"></li>
+                            <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+                        </ul>
+                    </li>
+                <% else %> 
+                    <li><%= link_to "Sign in", signin_path %></li>
+                <% end %>
+            </ul>
+        </nav>
+    </div>
 </header>

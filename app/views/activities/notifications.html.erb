@@ -1,27 +1,31 @@
 <center>
 
-    Test stuff
-
     <% counter = 0 %>
     <% @activities.each do |activity| %>
         <% counter = counter + 1 %>
         <% if activity.trackable_type == "Micropost"%>
+        
             <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) || current_user != activity.owner %>
                 <div class="activity">
+                	
                 <% if activity.owner.name == current_user.name %>
                     <%= link_to "You", activity.owner %>
                 <% else %>
                     <%= link_to activity.owner.name, activity.owner if activity.owner %>
                 <% end %>
                 added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %> <%= activity.created_at %> 
+            
             <% else %>
                 which has since been removed 
             <% end %>
+            
         <% end %>
         </div>
+        
         <% if counter == 10 %>
             <% break %>
         <% end %>
+    
     <% end %>
 
 </center>

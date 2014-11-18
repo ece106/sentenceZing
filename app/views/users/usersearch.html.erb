@@ -1,20 +1,20 @@
 <h1>User Search</h1>
 
 <table>
-  <thead>
-    <tr>
-      <th>Email</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+	<thead>
+    	<tr>
+      		<th>Email</th>
+      		<th></th>
+      		<th></th>
+      		<th></th>
+    	</tr>
+  	</thead>
 
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  	<tbody>
+    	<% @users.each do |user| %>
+      		<tr>
+        		<td><%= user.email %></td>
+      		</tr>
+    	<% end %>
+  	</tbody>
 </table>

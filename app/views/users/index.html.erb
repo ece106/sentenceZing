@@ -3,30 +3,31 @@
 <% flag = false %>
 
 <div class="row">
-  <% @users.each do |user| %>
-    <% @stories.each do |story| %>
-      <% if user.id == story.user_id || user.id == story.user2id %>
-        <% flag = true %>
-      <% end %>
-    <% end %>
+	<% @users.each do |user| %>
+    	<% @stories.each do |story| %>
+      		<% if user.id == story.user_id || user.id == story.user2id %>
+        		<% flag = true %>
+      		<% end %>
+    	<% end %>
 
-    <% if flag == true %>
-      <div class="col-md-2 col-sm-3 col-xs-4" >
-        <div class="row" style="vertical-align:top; horizontal-align:center; height:190px; overflow:hidden; " >
-          <% if user.image.present? && user.image != '' %> 
-            <%= link_to(image_tag(user.image, :size => "100x125",  :title => user.name ), user) %> 
-          <% else %>
-            <%= link_to(image_tag("default_profile.jpg", :size => "100x125",  :title => user.name ), user) %>
-          <% end %>
-          <br><%= link_to user.name, user %><br>
-          <% if user.loggedin == 1 %>
-            Online 
-          <% else %>
-            Offline   
-          <% end %>
-        </div>
-      </div> 
-    <% end %>
-  <% flag = false %>
-  <% end %>
+    	<% if flag == true %>
+      		<div class="col-md-2 col-sm-3 col-xs-4" >
+        		<div class="row" style="vertical-align:top; horizontal-align:center; height:190px; overflow:hidden; " >
+          			<% if user.image.present? && user.image != '' %> 
+            			<%= link_to(image_tag(user.image, :size => "100x125",  :title => user.name ), user) %> 
+          			<% else %>
+            			<%= link_to(image_tag("default_profile.jpg", :size => "100x125",  :title => user.name ), user) %>
+          			<% end %>
+          			<br><%= link_to user.name, user %><br>
+          
+          			<% if user.loggedin == 1 %>
+            			Online 
+          			<% else %>
+            			Offline   
+          			<% end %>
+        		</div>
+      		</div> 
+    	<% end %>
+  		<% flag = false %>
+  	<% end %>
 </div>

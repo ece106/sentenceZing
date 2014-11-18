@@ -1,12 +1,12 @@
 <%= form_for :message, url: reply_conversation_path(conversation) do |f| %>
-  <b>Subject</b>
-  <%= f.text_area :subject, :cols => 50, :rows => 1 %>
-  <br/><br/>
+  	<b>Subject</b>
+  	<%= f.text_area :subject, :cols => 50, :rows => 1 %>
+  	<br/><br/>
   
-  <b>Body </b>.
-  <%= f.text_area :body, :cols => 50, :rows => 3 %> <br> 
-  <br/>
+  	<b>Body </b>.
+  	<%= f.text_area :body, :cols => 50, :rows => 3 %>
+  	<br/>
   
-  <%= f.button :submit, class: 'btn-primary' %>
-  <%= submit_tag 'Cancel', type: :reset, class: 'btn btn-danger' %>
+  	<%= f.button :submit, class: 'btn-primary' %>
+  	<%= submit_tag 'Cancel', type: :reset, class: 'btn btn-danger' %>
 <% end %>

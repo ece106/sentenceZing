@@ -1,16 +1,16 @@
 <%= form_for :conversation, url: :conversations do |f| %>
-  <%= f.label :recipients, "Recipients" %>
-  <%= f.text_field :recipients %>
-  <br/><br/>
+    <%= f.label :recipients, "Recipients" %>
+    <%= f.text_field :recipients %>
+    <br/><br/>
   
-  <%= f.label :subject, "Subject" %>
-  <%= f.text_field :subject %>
-  <br/><br/>
+    <%= f.label :subject, "Subject" %>
+    <%= f.text_field :subject %>
+    <br/><br/>
   
-  <%= f.label :body, "Body" %>
-  <%= f.text_area :body %>
-  <br/><br/>
+    <%= f.label :body, "Body" %>
+    <%= f.text_area :body %>
+    <br/><br/>
   
-  <%= f.button :submit, class: 'btn-primary' %>
-  <br/><br/>
+    <%= f.button :submit, class: 'btn-primary' %>
+    <br/><br/>
 <% end %>

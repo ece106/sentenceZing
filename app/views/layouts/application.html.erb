@@ -1,38 +1,37 @@
 <!DOCTYPE html>
-<head>
-    <title>SentenceZing | <%= yield(:title)  %></title>
-    <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
-    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <link rel="shortcut icon" type="favicon.ico" href="/assets/favicon.ico"/>
-    <link rel="shortcut icon" type="favicon.ico" href="https://sentencezing.herokuapp.com//favicon.ico"/>
-    <%= csrf_meta_tags %>
-  </head>
+
+	<head>
+    	<title>SentenceZing | <%= yield(:title)  %></title>
+    	<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+    	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    	<link rel="shortcut icon" type="favicon.ico" href="/assets/favicon.ico"/>
+    	<link rel="shortcut icon" type="favicon.ico" href="https://sentencezing.herokuapp.com//favicon.ico"/>
+    	<%= csrf_meta_tags %>
+	</head>
   
     <%= render 'layouts/header' %>
   
-  <body>
+	<body>
+		<center>
+			<div class="banner" style="width:500px;height:100px;float:center;overflow:hidden">
+        		<%= image_tag("/assets/sentencezing.png", :width => "500") %>
+    		</div>
 
-	<center>
-	  <div class="banner" style="width:500px;height:100px;float:center;overflow:hidden">
-      <%= image_tag("/assets/sentencezing.png", :width => "500") %>
-    </div>
-
-    <div class="container">
-      <%= yield %>
-    </div>   
-    </center>
+    		<div class="container">
+        		<%= yield %>
+    		</div>   
+    	</center>
     
-    <%= stylesheet_link_tag "shadowbox.css" %>
-    <%= javascript_include_tag "shadowbox.js" %>
-    <script type="text/javascript">
-      Shadowbox.init({
-      });
-    </script>
+    	<%= stylesheet_link_tag "shadowbox.css" %>
+    	<%= javascript_include_tag "shadowbox.js" %>
+    	<script type="text/javascript">
+    		Shadowbox.init({
+      		});
+    	</script>
     
-    <script id="sid0020000058590817580">(function() {function async_load(){s.id="cid0020000058590817580";s.src='http://st.chatango.com/js/gz/emb.js';s.style.cssText="width:200px;height:300px;";s.async=true;s.text='{"handle":"sentencezing","arch":"js","styles":{"a":"CC0000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"CC0000","l":"CC0000","m":"CC0000","n":"FFFFFF","q":"CC0000","r":100,"pos":"bl","cv":1,"cvfntsz":"20px","cvbg":"CC0000","cvw":123,"cvh":45}}';var ss = document.getElementsByTagName('script');for (var i=0, l=ss.length; i < l; i++){if (ss[i].id=='sid0020000058590817580'){ss[i].id +='_';ss[i].parentNode.insertBefore(s, ss[i]);break;}}}var s=document.createElement('script');if (s.async==undefined){if (window.addEventListener) {addEventListener('load',async_load,false);}else if (window.attachEvent) {attachEvent('onload',async_load);}}else {async_load();}})();</script>
-    
-  </body>
+    	<script id="sid0020000058590817580">(function() {function async_load(){s.id="cid0020000058590817580";s.src='http://st.chatango.com/js/gz/emb.js';s.style.cssText="width:200px;height:300px;";s.async=true;s.text='{"handle":"sentencezing","arch":"js","styles":{"a":"CC0000","b":100,"c":"FFFFFF","d":"FFFFFF","k":"CC0000","l":"CC0000","m":"CC0000","n":"FFFFFF","q":"CC0000","r":100,"pos":"bl","cv":1,"cvfntsz":"20px","cvbg":"CC0000","cvw":123,"cvh":45}}';var ss = document.getElementsByTagName('script');for (var i=0, l=ss.length; i < l; i++){if (ss[i].id=='sid0020000058590817580'){ss[i].id +='_';ss[i].parentNode.insertBefore(s, ss[i]);break;}}}var s=document.createElement('script');if (s.async==undefined){if (window.addEventListener) {addEventListener('load',async_load,false);}else if (window.attachEvent) {attachEvent('onload',async_load);}}else {async_load();}})();</script>
+    </body>
   
-  <%= render 'layouts/footer' %> 
+	<%= render 'layouts/footer' %> 
   
 </html>
