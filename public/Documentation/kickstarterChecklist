@@ -8,31 +8,31 @@ Give link to sentenceZing.com for more info
 $: $2000 < x < $5000 at the most
 
 
-BELONGS IN THE VIDEO
-Testimonials from early adopters: 
-Example typical usage - speeded up
-Demo features - profiles, voting, notifications
-Pair writing - say something about why pair writing is good
-Dramatic reading
-Intro of who the Sentencezing team is
-Goals for the site
-Inspiration/motivation
-
-Flashy Intro: 1/4 second clips of stories
-"Hi. This is Michael. He's my favorite partner who doesn't do stupid things. Michael is Our Future. And that's a good thing.
-"And this is Lisa. She says sharing stories on web platforms will change education, employment, and socializing. She's cool for an old lady.
-"We're software developers with a passion for stories
-"and games. 
-"We're SentenceZing." 
-Usage: Screencast of Michael starting new story, entering 1st sentence, Michael: "I told Lisa I'm starting a story She's going to join the story, then her sentence will pop up." Lisa's sentence appears (Need to write the sentences in advance). "Now it's my turn." Michael types 3rd sentence. "We keep taking turns..." 10 timelapse sentences appear. "until we decide the story is complete." Type in THE END. Then Lisa does something goofy - puts code into the story?
-Testimonials: Ask Jordin, Christine, Hannah, Cary, Peter. Write questions to ask. Use OBS broadcaster software with Skype.
-
-
-
 MARKETING - how to make giving $ compelling
 What need does it meet: Writing exercises, meet a pair-writer online - how to make pair-writing part of culture
+
+Audience:
+Give talks at high schools	
 Have a livestream event on twitch or google hangout - tweet & facebook announcements, invite a few specific friends - do a practice
 SentenceZing party with prize for best vocabulary
+
+Kickstarter:
+- Look into local college writers groups
+- SentenceZing mailchimp - those who have signed up, friends who may be interested, 
+- Post stuff on goodreads, another site with a lot of writers? gamers? reddit, facebook GROUPS, linkedin GROUPS
+- Contact friends who have HS kids - go thru facebook, write a survey (Would you use this with your son/daughter? Would they use it with their friends? Would you recommend/tell friends?)
+- Weekly regular livestream
+- Livestream event on twitch. Invite people & let them know what's going to happen. 2 people stream face at once. I need OpenBroadcastSoftware. Michael invites Alan Wicke in skype list and Early Adopters. I'd invite Pam & Steve, Peter S, Ross, 
+Write a very short example/backup story in advance.
+Mention kickstarter campaign
+Ask crowd to type story ideas. Write the story, 6 lines. 
+Announce contest. According to votes.
+Ask crowd to type more story ideas. Tell everyone to go to sentenceZing and start a story.
+While they write stories, we check on stories & comment on them. Comment on contest.
+Tell people to vote. In case of tie, have everyone vote again.
+Prize is a t-shirt.
+- Daily cptv & sentencezing tweets
+- Link sz twitter to twitch
 
 
 GOALS
@@ -49,6 +49,31 @@ far stretch: badge scheme/titles - social butterfly (msgs), # stories, # sentenc
 site statistics - what would that be
 stretch: Teaching materials for your high school English class	
 stretch: mobile app
+
+(Create new game modes) - multi people in a story, use specific words, themes
+Create/Get more images and designs for the site - (Improve site design)
+Redesign User profile pages
+Create dynamic banner
+(Add messaging feature)
+(Improved Social Features) Add ability to invite someone to a story
+Add connectivity with fb so users can share their stories
+Add ability to have multiple users in a story
+Fix online/offline status of users
+Add export/print feature for stories - pick a border & get rid of names, linebreaks 
+Add a store to buy (or give some for free) ebooks of featured stories with illustrations - check with a lawyer
+Add a store set up to order personalized shirts, mugs, etc with quotes from story. or whole thing
+Add in ability to write a story by yourself to have voted on for top solo story
+Ability to write really long stories/short books and have published directly on CrowdPublishTv
+Phone App
+
+Create new game modes
+Add messaging feature
+Improved Social Features
+Book/magazine-like features
+Educational features
+Ability to write really long stories/short books and have published directly on CrowdPublishTv
+Stretch: Phone app
+SentenceZing Store
 
 
 REWARDS
@@ -141,35 +166,308 @@ Tue Nov 4
 Write draft video script
 
 Sun Nov 9
-Check-in with Who We Are/motivation, legal Articles of Incorporation
-Write a few goals
+Check-in with Who We Are/motivation
 
 Mon Nov 10
-Write a few more goals
-Marketing schedule
+Write goals
 
+Week of Nov 10
+Marketing schedule
+Refine goals & example story for video
+
+Mon Nov 17
+Marketing, twitch
+
+Tue Nov 18
+Set up sentenceZing twitch
+Write up goals for campaign
+
+Mon Nov 24
+Mailchimp, twitter
+Experiment with short livecast
+
+
+Tue Nov 25
+L: Email twitter
+Script for video
+M: Set up Selfstarter in heroku
+
+
+Tue Dec 2
+Write video script
+Self starter
+
+
+Mon Dec 8
+Video script
+Self starter
+
+
+Tue Dec 9
+Self starter CSS
+Download OBS broadcast software
+Try some livestream twitch
 
 
 November
 Plan & write most of the video
-Shoot most of the video
-Create the video for showcasing the existing site -Practice livestream & record video for campaign video
 Write text description for the campaign's web site
 Write draft of rewards list
 Research rewards costs
-Develop a marketing plan
-Collect target audience email addresses
-Finalize goals & stretch goals
-Showcase planned features
 
 December
-Register SentenceZing LLC
-Obtain ownership of SentenceZing logo
+Shoot most of the video
 Edit video
 Refine everything: video, goals, text description, rewards
 Send emails announcing upcoming campaign start date
 Estimate time to finish product if funded
+Collect target audience email addresses
+Finalize goals & stretch goals
+Showcase planned features
+Develop a marketing plan
+Create the video for showcasing the existing site -Practice livestream & record video for campaign video
 
 January
+Register SentenceZing LLC
+Obtain ownership of SentenceZing logo
 Send emails announcing progress
+Have a lawyer review TOS, Operating Agreement
+Register with IRS to get Tax ID number
+Get a bank account 
 
+
+
+BELONGS IN THE VIDEO
+Intro of who the Sentencezing team is
+Testimonials from early adopters: 
+Example typical usage - speeded up
+Demo features - profiles, voting, notifications
+Goals for the site
+Showcase planned features
+
+
+
+INT. LISA'S LIVING ROOM
+Michael and Lisa sit in front of the fireplace sipping hot chocolate and reading a book. A display of candles burns in the fireplace. 
+
+        MICHAEL
+    Hello. This is SentenceZing fireside chat with Michael and Lisa. 
+
+        LISA
+    SentenceZing is a pair-writing web site where you can create a short story with a partner. It helps you share story ideas and you can mentor one another in writing skills.
+
+        MICHAEL
+    And you get to see what crazy stuff old friends come up with, or meet new people online.
+
+        LISA
+    Michael & I are software engineers who love to share stories. We're creating SentenceZing so you can share your stories too.
+
+        MICHAEL
+    Let's hear what others have to say about SentenceZing.
+
+
+Testimonials: Ask Jordin, Christine, Hannah, Cary, Peter. Write questions to ask. Use OBS broadcaster software with Skype
+
+Questions for Testimonial Video Interviews:
+What did you like best about using SentenceZing?
+Why might other people want to use the site?
+What kind of people would you recommend use the site?
+
+
+INT. SENTENCEZING HEADQUARTERS (or Lisa's home office)
+Michael sits at a desk with his laptop and a Cat in the Hat hat. 
+
+        MICHAEL
+    So, how does sentenceZing work? I'll show you. 
+
+Michael motions to the audience to look at his screen.
+
+INT. SCREENSHOT
+Home page of sentenceZing.com. Go through all this very quickly. 
+
+        MICHAEL (OS)
+    I'll start a story so someone can join it.
+
+Click on New Story.
+
+        MICHAEL (OS)
+     Let's call it "We're Doing a Kickstarter Campaign."
+
+Type "We're Doing a Kickstarter Campaign" into Title - time lapse. 
+
+        MICHAEL (OS)
+     Let's say it's in the Nonfiction category. One of the future features of SentenceZing is to search by category.
+
+Type "Nonfiction" into Category - time lapse. Click Create Story. The screen changes to allow the first sentence to be typed.
+
+        MICHAEL (OS)
+    Now I enter the first sentence of the story.
+
+In time lapse at the speed of reading: Michael types, "The inception with the oracle was thwarted by a snowstorm, trapping the scion inside his bunker." Click the Post button.
+
+INT. SENTENCEZING HEADQUARTERS (or Lisa's home office)
+Michael at the desk.
+
+        MICHAEL
+    I have to wait for someone to join the story. I can check back in a few hours, or I can phone a friend and ask her to play right now.
+
+Michael calls on his phone.
+
+        MICHAEL 
+    Hi. Lisa?
+
+        LISA (OS) 
+    Hi Michael.
+
+        MICHAEL 
+    Let's play sentenceZing.
+
+        LISA (OS) 
+    I'm not answering my phone right now.
+
+Michael looks annoyed.
+
+INT. LIVING ROOM
+Lisa sits on the couch with her laptop and phone in front of her while her recorded message plays her voice.
+
+        LISA (OS) 
+    Send me a text at the beep and I'll play sentenceZing when I return. *BEEP*
+
+        MICHAEL (OS) 
+    Fine, Lisa. I'll send a text.
+
+INT. LISA'S SCREEN
+Home page of sentenceZing.com. Lisa clicks on Stories. 
+
+        LISA (OS) 
+    There are some stories that need to be joined.
+
+Lisa clicks on Join Story for the "We're Doing a Kickstarter Campaign." 
+
+        LISA (OS) 
+    It's my turn to add a sentence to the story.
+
+In time lapse: She types "They waited for the snow to pass. A week later, they entered the cave." and clicks Post.
+
+INT. SENTENCEZING HEADQUARTERS (or Lisa's home office)
+Michael is laying his head sideways on the desk with screen in view, bouncing a small ball & catching it.
+
+        MICHAEL (mumbling)
+    I know Lisa's phone is on.  
+
+INT. SCREENSHOT
+Screen refreshes to show Lisa's new sentence.
+
+        MICHAEL (mumbling OS)
+    She's just ignoring me.
+
+INT. SENTENCEZING HEADQUARTERS (or Lisa's home office)
+Michael sits up with a jolt.
+
+        MICHAEL
+    I got a new sentence! It's my turn.
+
+INT. SCREENSHOT
+In time lapse Michael types, "Inside the cave, they found a treasure chest encrusted with rubies and gems." Click Post.
+
+        MICHAEL (OS)
+    Now we keep taking turns writing short pieces of the story.
+
+Text: Slithering around the chest was a python. appears onscreen
+In time lapse Michael types, "The scion and oracle approached the treasure chest. When they opened it, they found an oculus that revealed a fissure in the cave's floor." Click the Post button.
+Text: Then the python ate the treasure chest and disappeared into the rift. appears onscreen.
+In time lapse Michael types, "Except that pythons don't eat rubies. The End." Click the Post button.
+
+INT. SENTENCEZING HEADQUARTERS (or Lisa's home office)
+Michael looks up from computer.
+
+        MICHAEL
+     And that's how to create a sentenceZing story.
+
+Lisa walks in typing on her phone.
+
+        LISA
+     Not the end. The python entered the 4th dimension and announced her message to the world. BLOOD. GORE. MURDER. The End. Mwaaaahaaahaha.
+
+INT. SCREENSHOT
+The sentence Lisa just said appears onscreen.
+
+INT. SENTENCEZING HEADQUARTERS (or Lisa's home office)
+Lisa comes up from behind and gives Michael a hug around his shoulders.
+
+        MICHAEL
+    I knew you had your phone on because I could hear it. 
+
+        LISA
+    Let's show them our sentenceZing profiles.
+
+        MICHAEL
+    Why do you want to show them that?
+
+Lisa sits in the chair next to Michael.
+
+        LISA
+    Because I want them to see your cowboy hat.
+
+INT. SCREENSHOT
+Michael's profile - cowboy hat picture, So Sentence dog, followers.
+
+        LISA (OS)
+    See how popular Michael is. He has 6 followers.
+
+        MICHAEL (OS)
+    That's not very popular.
+
+        LISA (OS)
+    It's more than anyone else has yet.
+
+        MICHAEL (OS)
+    Probably because I've contributed to more stories than anyone else has.
+
+Go to Lisa's profile.
+
+        LISA (OS)
+    Maybe. But I've written more total sentences.
+
+        MICHAEL (OS)
+    I'm going to vote for one of the stories.
+
+Click on Stories. Page with list of stories appears. Click on title of a story with 0 likes. Shadowbox appears. Click like. Bring arrow toward the X at the bottom of screen. (Press F5.) Shadowbox disappears.
+
+        MICHAEL (OS)
+    Look. I have some notifications. 
+
+Click on Notifications dropdown. 
+
+        MICHAEL (OS)
+    Must be my turn to add to the story.
+
+Click on whatever story is at the top of the list. 
+
+INT. SENTENCEZING HEADQUARTERS (or Lisa's home office)
+Lisa and Michael.
+
+        MICHAEL 
+    But I'll add to it later. I'd rather talk about the goals we have for the site.
+
+        LISA
+    If our total pledges add up to $1000, we're going to add a messaging feature and improve the design of user profiles and the other pages on the site.
+
+        MICHAEL 
+    And if we get over $2000 in pledges, we'll create new game modes and implement some social sharing features.
+
+        LISA 
+    But if we get over $4000 in pledges, we'll create a feature so you can order t-shirts with your story printed on the front with a pretty border.
+
+        MICHAEL 
+    And if we get over $40 000 in pledges, we'll create a sentenceZing app for Android.
+
+
+
+
+
+        LISA
+    A long time ago, in a place far far away, there lived a bunny.
+
+        MICHAEL
+    The bunny morphed into a zombie and ran through the town while everyone used it for target practice.
