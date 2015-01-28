@@ -27,6 +27,7 @@ class StoriesController < ApplicationController
     # GET /stories/new
     def new
         @story = Story.new
+        @users = current_user.followed_users.paginate(page: params[:page])
         if signed_in?
             @feed_items = current_user.feed.paginate(page: params[:page])
         end

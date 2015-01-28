@@ -10,6 +10,11 @@
     	<%= f.label :category %><br>
     	<%= f.text_field :category %>
   	</div>
+  	<br/>
+  	<div class="field">
+  		<%= f.label :user2id, "Invite a friend (optional)" %><br>
+    	<%= select(:user2id, "user_id", User.all.collect {|u|u.name}, {include_blank: true}) %>
+  	</div>
 
   	<br/>
 
@@ -20,3 +25,4 @@
 <% end %>
 
 <%= link_to 'Back', stories_path %>
+<br/><br/>
