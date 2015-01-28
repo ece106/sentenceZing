@@ -734,11 +734,31 @@ Modified gift purchase page to clarify benefits & gift items
 
 Sat Dec 13, 2014
 Mass follow of twitter booklovers & corresponding tweets, sentenceZing DMs
-Send sentenceZing messages to Facebook friends with teen parents
+Sent sentenceZing messages to Facebook friends with teen parents
 
 
 Mon Dec 15, 2014
 Mass follow of twitter booklovers & corresponding tweets, sentenceZing DMs
-Check over delivery of sentenceZing t-shirts
-Take photos of t-shirts
-Debug hit counter
+Checked over delivery of sentenceZing t-shirts
+Took photos of t-shirts
+Debugged hit counter
+
+
+Mon Jan 5, 2015
+Went through details of submitting LLC formation form online
+Transferred DNS from old domain registrar to new & set to point to heroku
+Set up sentencezing.com email addresses for lisa & michael
+
+
+Tue Jan 6, 2015
+Requested and reviewed legal information for submitting LLC formation form
+
+
+Wed Jan 7, 2015
+Researched details of Amazon Payments
+
+
+Mon Jan 12, 2015
+Reviewed CSS for sentencefundzing
+Wrote content for goals and stretch goals
+

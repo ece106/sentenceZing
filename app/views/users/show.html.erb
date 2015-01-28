@@ -41,7 +41,9 @@
     	<div class="col-md-7 col-sm-7 col-xs-7" > 
     		<div class="userinfo2" >
         		<br><strong>User Bio: </strong> <br>
-        		<%= @user.aboutme %> <br><br>
+            <% if @user.aboutme %> 
+          		<%= simple_format @user.aboutme.gsub(/\r\n/, '<br>') %> 
+            <% end %>
         		<strong>Stories Contributed to:</strong><br>
         		<% @stories.each do |story| %>
           			<% if @user.id == story.user_id || @user.id == story.user2id %>

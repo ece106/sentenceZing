@@ -36,44 +36,45 @@ Prize is a t-shirt.
 
 
 GOALS
-stretch: streamline/make easier Force-Pair mentors w/people looking for help 
-stretch: phone app
-Make a tag/icon for stories where people want a mentor or to be a mentor
-near stretch: Be able to leave comments on sentences - for teachers or mentors
-far stretch: special matchmaking
-implement badges for: #of sentencezings, # matched to people, recruiting friends
-stretch: usage stats
-way stretch: point system to barter for votes etc
-stretch: Tshirts with contributors' story printed on them 
-far stretch: badge scheme/titles - social butterfly (msgs), # stories, # sentencezings
-site statistics - what would that be
-stretch: Teaching materials for your high school English class	
-stretch: mobile app
+Improve design of profile pages
+Denote online/offline status of users
+Create badges for frequent users of 
+  - SentenceZings
+  - Writing stories with many different people
+  - Messaging friends through the site
 
-(Create new game modes) - multi people in a story, use specific words, themes
-Create/Get more images and designs for the site - (Improve site design)
-Redesign User profile pages
-Create dynamic banner
-(Add messaging feature)
-(Improved Social Features) Add ability to invite someone to a story
-Add connectivity with fb so users can share their stories
-Add ability to have multiple users in a story
-Fix online/offline status of users
-Add export/print feature for stories - pick a border & get rid of names, linebreaks 
-Add a store to buy (or give some for free) ebooks of featured stories with illustrations - check with a lawyer
-Add a store set up to order personalized shirts, mugs, etc with quotes from story. or whole thing
-Add in ability to write a story by yourself to have voted on for top solo story
-Ability to write really long stories/short books and have published directly on CrowdPublishTv
-Phone App
-
-Create new game modes
-Add messaging feature
-Improved Social Features
-Book/magazine-like features
+STRETCH GOALS
 Educational features
+  Teaching materials for your high school English class  
+  Enter grades/comments on sentences and stories viewable only by sentence owner - for teachers or mentors
+  Pair mentors with people looking for help 
+  Badges for educational usage (mentor badge, teach badge, graduate badges, skill-level badges)
+
+Social Features 
+  Invite friends to join a story
+  Connectivity with Facebook and Twitter so users can share stories on their timeline
+  Comment feed on stories
+  Badges for each social feature
+
+New Game Modes
+  Multiple users contribute to a story
+  Use specific words in each sentenceZing
+  Story themes
+  Write a story by yourself to have voted on for top solo story
+
+Design
+  Create/Get more images and designs for the site
+  Create dynamic banner
+
+SUPER STRETCH GOALS
+Site viewing statistics for each user 
+Phone App
+Story-pair matchmaking based on interests (user-entered tags)
+Point system to barter for votes, other things
+SentenceZing Store:
+  Buy (or give some for free) ebooks of featured stories with illustrations - check with a lawyer
+  Set up to order personalized shirts, mugs, etc with quotes from story. or whole thing
 Ability to write really long stories/short books and have published directly on CrowdPublishTv
-Stretch: Phone app
-SentenceZing Store
 
 
 REWARDS
@@ -186,54 +187,64 @@ Mon Nov 24
 Mailchimp, twitter
 Experiment with short livecast
 
-
 Tue Nov 25
 L: Email twitter
 Script for video
 M: Set up Selfstarter in heroku
 
-
 Tue Dec 2
 Write video script
 Self starter
 
-
 Mon Dec 8
 Video script
 Self starter
-
 
 Tue Dec 9
 Self starter CSS
 Download OBS broadcast software
 Try some livestream twitch
 
+Mon Jan 12
+Write content for selfstarter site
+Figure out where to paste rewards list
 
-November
+Tue Jan 13
+M: Widget for Facebook
+Layout for rewards & About-section content
+Located where pic of us goes, links to sz.com
+L: Widget for twitter
+email twitter for account cancellation
+
+Mon Feb 2
+M: look into notification last_seen issue
+look into bio/aboutme issue
+js for indicating on/offline
+L: Write About section, How Help, Who we are
+
+
+January
 Plan & write most of the video
 Write text description for the campaign's web site
-Write draft of rewards list
-Research rewards costs
+Register SentenceZing LLC
+Obtain ownership of SentenceZing logo
+Register with IRS to get Tax ID number
+Get a bank account 
 
-December
+February
 Shoot most of the video
 Edit video
 Refine everything: video, goals, text description, rewards
 Send emails announcing upcoming campaign start date
 Estimate time to finish product if funded
 Collect target audience email addresses
-Finalize goals & stretch goals
+Write goals & stretch goals
 Showcase planned features
 Develop a marketing plan
 Create the video for showcasing the existing site -Practice livestream & record video for campaign video
 
-January
-Register SentenceZing LLC
-Obtain ownership of SentenceZing logo
-Send emails announcing progress
+March
 Have a lawyer review TOS, Operating Agreement
-Register with IRS to get Tax ID number
-Get a bank account 
 
 
 
