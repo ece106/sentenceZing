@@ -17,8 +17,11 @@
                             <% if activity.trackable_type == "Micropost"%>
                       
                                 <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
-                        
-                                    <% if activity.id > current_user.last_seen %>
+                                    <% @lastSeenActivity = current_user.last_seen %>
+                                    <% if (@lastSeenActivity == nil) %>
+                        	        	<% @lastSeenActivity = 0 %>
+                        			<% end %>
+                                    <% if activity.id > @lastSeenActivity %>
                                         <% numnotificatn = numnotificatn + 1 %>
                                     <% end %>
                                 
@@ -33,7 +36,6 @@
                     </a>
                     <ul class="dropdown-menu" style="width:450px">
                         <% counter = 0 %>
-                        <% lastSeenActivity = 0 %>
                         <div>
                             <% @activities.each do |activity| %>
                                 <% if activity.trackable_type == "Micropost"%>
@@ -41,9 +43,9 @@
                                     <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
                                         <% counter = counter + 1 %>
                                         
-                                        <% if activity.id > lastSeenActivity %>
-                                            <% lastSeenActivity = activity.id %>
-                                            <% current_user.update_attribute(:last_seen, lastSeenActivity) %>
+                                        <% if activity.id > @lastSeenActivity %>
+                                            <% @lastSeenActivity = activity.id %>
+                                            <% current_user.update_attribute(:last_seen, @lastSeenActivity) %>
                                         <% end %>
                                         <li>
                                         &nbsp;&nbsp;
