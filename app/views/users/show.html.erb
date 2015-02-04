@@ -1,3 +1,4 @@
+<!--
 <div class="userProfile">
 	<p id="notice"><%= notice %></p>
 
@@ -54,3 +55,288 @@
    		</div>
  	</div>
 </div>
+-->
+
+
+
+
+
+<hr>
+<div class="container">
+	<div class="row">
+  		<!-- <div class="col-sm-10"><h1><%= @user.name %></h1></div> <br/> -->
+    	<span class="pull-left">
+    		<% if @user.image.present? && @user.image != "" %>
+          		<%= image_tag(@user.image, :size => "200x250") %> 
+        	<% else %>
+          		<%= image_tag "default_profile.jpg", :size => "200x250" %>
+        	<% end %>
+		</span>
+		<span>
+			<% if @user.banner.present? && @user.banner != "" %>
+          		<%= image_tag(@user.banner, :size => "500x250") %>
+        	<% else %>
+          		<%= image_tag "default_banner.jpg", :width => "500", :height => "250" %>
+        	<% end %>	
+		</span>
+    </div>
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+              
+          <ul class="list-group">
+            <li class="list-group-item text-muted">Profile</li>
+                        <li class="list-group-item text-right"><span class="pull-left"><strong>Username</strong></span> <%= @user.name %></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span>  <%= @user.created_at.strftime("%m/%d/%Y") %></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>Status</strong></span> 
+				<% if @user.loggedin == 1 %>
+          			Online 
+        		<% else %>
+          			Offline
+        		<% end %> 
+			</li>  
+          </ul> 
+              
+          <!-- 
+          <div class="panel panel-default">
+            <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i></div>
+            <div class="panel-body"><a href="http://bootply.com">bootply.com</a></div>
+          </div>
+          -->
+          
+          <ul class="list-group">
+            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong>SentenceZings</strong></span> <%= @user.microposts.count %></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong><%= link_to 'following', following_user_path(@user) %></strong></span> <%= @user.followed_users.count %></li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong><%= link_to 'followers', followers_user_path(@user) %></strong></span> <%= @user.followers.count %></li>
+          </ul> 
+               
+          <!--
+          <div class="panel panel-default">
+            <div class="panel-heading">Social Media</div>
+            <div class="panel-body">
+            	<i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i class="fa fa-google-plus fa-2x"></i>
+            </div>
+          </div>
+          -->
+          
+          <%= render 'follow_form' if signed_in? %>
+          
+        </div><!--/col-3-->
+    	<div class="col-sm-9">
+          
+          <ul class="nav nav-tabs" id="myTab">
+            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+            <% if current_user.name == @user.name %>
+            	<li><a href="#messages" data-toggle="tab">Messages</a></li>
+            	<li><a href="#settings" data-toggle="tab">Settings</a></li>
+            <% end %>
+          </ul>
+              
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">    
+            	
+            	
+            <h4>User Bio</h4>
+            <% if @user.aboutme %> 
+          		<%= simple_format @user.aboutme.gsub(/\r\n/, '<br>') %> 
+            <% else %>
+            	<%= @user.name %> has not created a bio.
+            <% end %>
+            
+            <br>
+            <hr>
+            <br>
+             
+              <h4>Stories contributed to</h4> 
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Story Name</th>
+                      <th>Authors</th>
+                      <th>Likes</th>
+                    </tr>
+                  </thead>
+                  <tbody id="items">
+                  <% count = 1 %>
+                  <% @stories.each do |story| %>
+                    <% if count == 9 %>
+                      <% break %>
+                    <% end %>
+                    <% if @user.id == story.user_id || @user.id == story.user2id %>
+                    <tr>
+                      <td><%= count %></td>
+                      <td><%= link_to story.title, edit_story_path(story.id) %></td>
+                      <td><%= User.find(story.user_id).name %> 
+      					<% if story.user2id != nil %>
+        			      and <%= User.find(story.user2id).name %>
+      			        <% end %>
+                      </td>
+                      <td><%= Like.where(:story_id => story.id).count %></td>
+                    </tr>
+                    <% count = count + 1 %>
+                    <% end %>
+                  <% end %>
+                  </tbody>
+                </table>
+                <!--
+                <hr>
+                <div class="row">
+                  <div class="col-md-4 col-md-offset-4 text-center">
+                  	<ul class="pagination" id="myPager"></ul>
+                  </div>
+                </div>
+              </div>
+              -->
+              
+              <hr>
+              <br>
+              
+              <h4>Recent Activity</h4>
+              
+              <div class="table-responsive">
+                <table class="table table-hover">
+                  <tbody>
+                  	<% count2 = 1 %>
+                  	<% @activities.each do |activity| %>
+                  	  <% if count2 == 9 %>
+                  	    <% break %>
+                  	  <% end %>
+                      <% if activity.trackable_type == "Story"%>
+                        <% if current_user.following?(activity.owner) || (current_user.id == activity.trackable.user_id || current_user.id == activity.trackable.user2id) || current_user == activity.owner %>
+                          <div class="activity">
+                            <% if activity.owner.name == current_user.name %>
+                              <%= link_to "You", activity.owner %>
+                            <% else %>
+                              <%= link_to activity.owner.name, activity.owner if activity.owner %>
+                            <% end %>
+                    
+                            <% if activity.key == "story.create" %>
+                              created a new story 
+                            <% elsif activity.key == "story.update" %>
+                              joined the story 
+                            <% end %>
+                            <%= link_to activity.trackable.title, edit_story_path(activity.trackable) %> - <%= activity.created_at.strftime("%m/%d/%Y") %>   
+                        <% end %>
+      
+                          <% elsif activity.trackable_type == "Micropost"%>
+                            <% if current_user.following?(activity.owner) || (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) || current_user == activity.owner %>
+                              <div class="activity">
+            	                <% if activity.owner.name == current_user.name %>
+                                  <%= link_to "You", activity.owner %>
+                                <% else %>
+                                  <%= link_to activity.owner.name, activity.owner if activity.owner %>
+                                <% end %>
+                                added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %> - <%= activity.created_at.strftime("%m/%d/%Y") %> 
+                           <% end %>
+        
+                           <% else %>
+                             which has since been removed 
+                           <% end %>
+                         </div>
+                       <% count2 = count2 + 1 %>
+                       <% end %>
+                   
+                  </tbody>
+                </table>
+              </div>
+              
+             <% if current_user.name == @user.name %>
+             </div><!--/tab-pane-->
+             <div class="tab-pane" id="messages">
+               
+               <h2></h2>
+               
+               <ul class="list-group">
+                  <li class="list-group-item text-muted">Inbox</li>
+                  <li class="list-group-item text-right"><a href="#" class="pull-left">Here is your a link to the latest summary report from the..</a> 2.13.2014</li>
+                  <li class="list-group-item text-right"><a href="#" class="pull-left">Hi Joe, There has been a request on your account since that was..</a> 2.11.2014</li>
+                  <li class="list-group-item text-right"><a href="#" class="pull-left">Nullam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  <li class="list-group-item text-right"><a href="#" class="pull-left">Thllam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  <li class="list-group-item text-right"><a href="#" class="pull-left">Wesm sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  <li class="list-group-item text-right"><a href="#" class="pull-left">For therepien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  <li class="list-group-item text-right"><a href="#" class="pull-left">Also we, havesapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  <li class="list-group-item text-right"><a href="#" class="pull-left">Swedish chef is assaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  
+                </ul> 
+               
+             </div><!--/tab-pane-->
+             <div class="tab-pane" id="settings">
+            		
+               	
+                  <hr>
+                  <form class="form" action="##" method="post" id="registrationForm">
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="first_name"><h4>First name</h4></label>
+                              <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="last_name"><h4>Last name</h4></label>
+                              <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                          </div>
+                      </div>
+          
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="phone"><h4>Phone</h4></label>
+                              <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                          </div>
+                      </div>
+          
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                             <label for="mobile"><h4>Mobile</h4></label>
+                              <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Email</h4></label>
+                              <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="email"><h4>Location</h4></label>
+                              <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                              <label for="password"><h4>Password</h4></label>
+                              <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          
+                          <div class="col-xs-6">
+                            <label for="password2"><h4>Verify</h4></label>
+                              <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                           <div class="col-xs-12">
+                                <br>
+                              	<button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                               	<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                            </div>
+                      </div>
+              	</form>
+              </div>
+              <% end %>
+               
+              </div><!--/tab-pane-->
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+    </div><!--/row-->

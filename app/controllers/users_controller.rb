@@ -23,6 +23,8 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @microposts = @user.microposts.paginate(page: params[:page])
         @stories = Story.all
+        @story = Story.find(params[:id])
+        @activities = PublicActivity::Activity.order('created_at desc').paginate(page: params[:page])
     end
 
     # GET /users/new
