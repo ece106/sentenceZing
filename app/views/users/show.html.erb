@@ -1,7 +1,6 @@
 <hr>
 <div class="container">
 	<div class="row">
-  		<!-- <div class="col-sm-10"><h1><%= @user.name %></h1></div> <br/> -->
     	<span class="pull-left">
     		<% if @user.image.present? && @user.image != "" %>
           		<%= image_tag(@user.image, :size => "200x250") %> 
@@ -19,219 +18,206 @@
     </div>
     <br/>
     <div class="row">
-  		<div class="col-sm-3"><!--left col-->
-              
-          <ul class="list-group">
-            <li class="list-group-item text-muted">Profile</li>
-                        <li class="list-group-item text-right"><span class="pull-left"><strong>Username</strong></span> <%= @user.name %></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span>  <%= @user.created_at.strftime("%m/%d/%Y") %></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>Status</strong></span> 
-				<% if @user.loggedin == 1 %>
-          			Online 
-        		<% else %>
-          			Offline
-        		<% end %> 
-			</li>  
-          </ul> 
+  		<div class="col-sm-3"><!--left col-->  
+        	<ul class="list-group">
+            	<li class="list-group-item text-muted">Profile</li>
+                <li class="list-group-item text-right"><span class="pull-left"><strong>Username</strong></span> <%= @user.name %></li>
+            	<li class="list-group-item text-right"><span class="pull-left"><strong>Joined</strong></span>  <%= @user.created_at.strftime("%m/%d/%Y") %></li>
+            	<li class="list-group-item text-right"><span class="pull-left"><strong>Status</strong></span> 
+					<% if @user.loggedin == 1 %>
+          				Online 
+        			<% else %>
+          				Offline
+        			<% end %> 
+				</li>  
+          	</ul> 
+          	<ul class="list-group">
+            	<li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
+            	<li class="list-group-item text-right"><span class="pull-left"><strong>SentenceZings</strong></span> <%= @user.microposts.count %></li>
+            	<li class="list-group-item text-right"><span class="pull-left"><strong><%= link_to 'following', following_user_path(@user) %></strong></span> <%= @user.followed_users.count %></li>
+            	<li class="list-group-item text-right"><span class="pull-left"><strong><%= link_to 'followers', followers_user_path(@user) %></strong></span> <%= @user.followers.count %></li>
+          	</ul> 
           
-          <ul class="list-group">
-            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong>SentenceZings</strong></span> <%= @user.microposts.count %></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong><%= link_to 'following', following_user_path(@user) %></strong></span> <%= @user.followed_users.count %></li>
-            <li class="list-group-item text-right"><span class="pull-left"><strong><%= link_to 'followers', followers_user_path(@user) %></strong></span> <%= @user.followers.count %></li>
-          </ul> 
-          
-          <%= render 'follow_form' if signed_in? %>
-          
+          	<%= render 'follow_form' if signed_in? %>
         </div><!--/col-3-->
-    	<div class="col-sm-9">
+    <div class="col-sm-9">
           
-          <ul class="nav nav-tabs" id="myTab">
-            <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-            <% if current_user.name == @user.name %>
-            	<li><a href="#messages" data-toggle="tab">Messages</a></li>
-            	<li><a href="#activity" data-toggle="tab">Activity</a></li>
-            	<li><a href="#edit" data-toggle="tab">Edit</a></li>
-            <% end %>
-          </ul>
+    <ul class="nav nav-tabs" id="myTab">
+    	<li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
+        <% if current_user.name == @user.name %>
+            <li><a href="#messages" data-toggle="tab">Messages</a></li>
+            <li><a href="#activity" data-toggle="tab">Activity</a></li>
+            <li><a href="#edit" data-toggle="tab">Edit</a></li>
+        <% end %>
+    </ul>
               
-          <div class="tab-content">
-   			<div class="tab-content">
-				<div class="tab-pane active" id="profile">
-					<h4>User Bio</h4>
-            		<% if @user.aboutme %> 
-          				<%= simple_format @user.aboutme.gsub(/\r\n/, '<br>') %> 
-            		<% else %>
-            			<%= @user.name %> has not created a bio.
-            		<% end %>
-            		<hr>
+    <div class="tab-content">
+   		<div class="tab-content">
+			<div class="tab-pane active" id="profile">
+				<h4>User Bio</h4>
+            	<% if @user.aboutme %> 
+          			<%= simple_format @user.aboutme.gsub(/\r\n/, '<br>') %> 
+            	<% else %>
+            		<%= @user.name %> has not created a bio.
+            	<% end %>
+            	<hr>
              
-              		<h4>Stories contributed to</h4> 
-              		<div class="table-responsive">
-                		<table class="table table-hover">
-                  			<thead>
-                    			<tr>
-                      				<th>#</th>
-                      				<th>Story Name</th>
-                      				<th>Authors</th>
-                      				<th>Likes</th>
-                    			</tr>
-                  			</thead>
-                  			<tbody id="items">
-                  				<% count = 1 %>
-                  				<% @stories.each do |story| %>
-                    				<% if count == 9 %>
-                      					<% break %>
-                    				<% end %>
-                    				<% if @user.id == story.user_id || @user.id == story.user2id %>
-                    					<tr>
-                      						<td><%= count %></td>
-                      						<td><%= link_to story.title, edit_story_path(story.id) %></td>
-                      						<td><%= User.find(story.user_id).name %> 
-      											<% if story.user2id != nil %>
-        			      							and <%= User.find(story.user2id).name %>
-      			        						<% end %>
-                      						</td>
-                      						<td><%= Like.where(:story_id => story.id).count %></td>
-                    					</tr>
-                    					<% count = count + 1 %>
-                    				<% end %>
-                  				<% end %>
-                  				</tbody>
-                			</table>
-                		</div>
-					</div>
-					<div class="tab-pane" id="messages">
-						<h2>Messages</h2>
-               			<p>No messages</p>
-               			<!--
-               			<ul class="list-group">
-                  			<li class="list-group-item text-muted">Inbox</li>
-                  			<li class="list-group-item text-right"><a href="#" class="pull-left">Here is your a link to the latest summary report from the..</a> 2.13.2014</li>
-                  			<li class="list-group-item text-right"><a href="#" class="pull-left">Hi Joe, There has been a request on your account since that was..</a> 2.11.2014</li>
-                  			<li class="list-group-item text-right"><a href="#" class="pull-left">Nullam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  			<li class="list-group-item text-right"><a href="#" class="pull-left">Thllam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  			<li class="list-group-item text-right"><a href="#" class="pull-left">Wesm sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  			<li class="list-group-item text-right"><a href="#" class="pull-left">For therepien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  			<li class="list-group-item text-right"><a href="#" class="pull-left">Also we, havesapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  			<li class="list-group-item text-right"><a href="#" class="pull-left">Swedish chef is assaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  		-->
-                		</ul> 
-					</div>
-					<div class="tab-pane" id="activity">
-						<h4>Recent Activity</h4>
-              
-              			<div class="table-responsive">
-                			<table class="table table-hover">
-                  				<tbody>
-                  					<% count2 = 1 %>
-                  					<% @activities.each do |activity| %>
-                  	  					<% if count2 == 9 %>
-                  	    					<% break %>
-                  	  					<% end %>
-                      					<% if activity.trackable_type == "Story"%>
-                        					<% if current_user.following?(activity.owner) || (current_user.id == activity.trackable.user_id || current_user.id == activity.trackable.user2id) || current_user == activity.owner %>
-                          						<div class="activity">
-                            						<% if activity.owner.name == current_user.name %>
-                              							<%= link_to "You", activity.owner %>
-                            						<% else %>
-                              							<%= link_to activity.owner.name, activity.owner if activity.owner %>
-                            						<% end %>
-                    
-                            						<% if activity.key == "story.create" %>
-                              							created a new story 
-                            						<% elsif activity.key == "story.update" %>
-                              							joined the story 
-                            						<% end %>
-                            						<%= link_to activity.trackable.title, edit_story_path(activity.trackable) %> - <%= activity.created_at.strftime("%m/%d/%Y") %>   
-                        					<% end %>
-      
-                          					<% elsif activity.trackable_type == "Micropost"%>
-                            					<% if current_user.following?(activity.owner) || (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) || current_user == activity.owner %>
-                              						<div class="activity">
-            	                						<% if activity.owner.name == current_user.name %>
-                                  							<%= link_to "You", activity.owner %>
-                                						<% else %>
-                                  							<%= link_to activity.owner.name, activity.owner if activity.owner %>
-                                						<% end %>
-                                						added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %> - <%= activity.created_at.strftime("%m/%d/%Y") %> 
-                           						<% end %>
-        
-                           					<% else %>
-                            				 which has since been removed 
-                           				<% end %>
-                         			</div>
-                       				<% count2 = count2 + 1 %>
-                       			<% end %>
-                   
-                  				</tbody>
-                			</table>
-              			</div>
-					</div>
-					<div class="tab-pane" id="edit">
-                  		<%= form_for @user, :html => {:multipart => true} do |f| %>
-						<%= render 'shared/error_messages', object: f.object %>
-                      		<div class="form-group">
-                          
-                          		<div class="col-xs-6">
-                              		<label for="username"><h4>Username</h4></label>
-                              		<%= f.text_field :name, :class => "form-control" %>
-                          		</div>
-                      		</div>
-                      		<div class="form-group">
-                          
-                          		<div class="col-xs-6">
-                            		<label for="email"><h4>Email</h4></label>
-                              		<%= f.text_field :email, :class => "form-control" %>
-                          		</div>
-                      		</div>
-          
-                      		<div class="form-group">
-                          
-                          		<div class="col-xs-6">
-                              		<label for="password"><h4>Password</h4></label>
-                              		<%= f.password_field :password, :class => "form-control" %>
-                          		</div>
-                      		</div>
-          
-                      		<div class="form-group">
-                          		<div class="col-xs-6">
-                             		<label for="verify"><h4>Verify</h4></label>
-                              		<%= f.password_field :password_confirmation, :class => "form-control" %>
-                          		</div>
-                      		</div>
-                      		<div class="form-group">
-                          
-                          		<div class="col-xs-6">
-                              		<label for="profile_picture"><h4>Profile Picture</h4></label>
-                              		<%= f.file_field :image, :class => "form-content" %>
-                          		</div>
-                      		</div>
-                      		<div class="form-group">
-                          
-                          		<div class="col-xs-6">
-                              		<label for="banner"><h4>Banner</h4></label>
-                              		<%= f.file_field :banner, :class => "form-content" %>
-                          		</div>
-                      		</div>
-                      		<div class="form-group">
-                          
-                          		<div class="col-xs-6">
-                              		<label for="Bio"><h4>Bio</h4></label>
-                              		<%= f.text_area :aboutme, :cols => 50, :rows => 3, placeholder:  "About Me" %>
-                          		</div>
-                      		</div>
-                      		<div class="form-group">
-                           		<div class="col-xs-12">
-                                	<br>
-                                	<br><%= f.submit "Update Profile", class: "btn btn-lg btn-success" %>
-                               		<button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
-                            	</div>
-                      		</div>
-                      		<br/><br/>
-              			<% end %>
-              		</div>
+              	<h4>Stories contributed to</h4> 
+              	<div class="table-responsive">
+                	<table class="table table-hover">
+                  		<thead>
+                    		<tr>
+                      			<th>#</th>
+                      			<th>Story Name</th>
+                      			<th>Authors</th>
+                      			<th>Likes</th>
+                    		</tr>
+                  		</thead>
+                  		<tbody id="items">
+                  			<% count = 1 %>
+                  			<% @stories.each do |story| %>
+                    			<% if count == 9 %>
+                      				<% break %>
+                    			<% end %>
+                    			<% if @user.id == story.user_id || @user.id == story.user2id %>
+                    				<tr>
+                      					<td><%= count %></td>
+                      					<td><%= link_to story.title, edit_story_path(story.id) %></td>
+                      					<td><%= User.find(story.user_id).name %> 
+      										<% if story.user2id != nil %>
+        			      						and <%= User.find(story.user2id).name %>
+      			        					<% end %>
+                      					</td>
+                      					<td><%= Like.where(:story_id => story.id).count %></td>
+                    				</tr>
+                    				<% count = count + 1 %>
+                    			<% end %>
+                  			<% end %>
+                  		</tbody>
+                	</table>
 				</div>
-
-        </div><!--/col-9-->
-    </div><!--/row-->
+			</div>
+			<div class="tab-pane" id="messages">
+				<h2>Messages</h2>
+               	<ul class="list-group">
+                  	<li class="list-group-item text-muted">Inbox</li>
+                  	<li class="list-group-item text-right"><a href="#" class="pull-left">Here is your a link to the latest summary report from the..</a> 2.13.2014</li>
+                  	<li class="list-group-item text-right"><a href="#" class="pull-left">Hi Joe, There has been a request on your account since that was..</a> 2.11.2014</li>
+                  	<li class="list-group-item text-right"><a href="#" class="pull-left">Nullam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  	<li class="list-group-item text-right"><a href="#" class="pull-left">Thllam sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  	<li class="list-group-item text-right"><a href="#" class="pull-left">Wesm sapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  	<li class="list-group-item text-right"><a href="#" class="pull-left">For therepien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  	<li class="list-group-item text-right"><a href="#" class="pull-left">Also we, havesapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                  	<li class="list-group-item text-right"><a href="#" class="pull-left">Swedish chef is assaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
+                </ul> 
+			</div>
+			<div class="tab-pane" id="activity">
+				<h4>Recent Activity</h4>
+              	<div class="table-responsive">
+                	<table class="table table-hover">
+                  		<tbody>
+                  			<% count2 = 1 %>
+                  			<% @activities.each do |activity| %>
+                  	  			<% if count2 == 9 %>
+                  	    			<% break %>
+                  	  			<% end %>
+                      			<% if activity.trackable_type == "Story"%>
+                        			<% if current_user.following?(activity.owner) || (current_user.id == activity.trackable.user_id || current_user.id == activity.trackable.user2id) || current_user == activity.owner %>
+                          				<div class="activity">
+                            				<% if activity.owner.name == current_user.name %>
+                              					<%= link_to "You", activity.owner %>
+                            				<% else %>
+                              					<%= link_to activity.owner.name, activity.owner if activity.owner %>
+                            				<% end %>                   
+                            				<% if activity.key == "story.create" %>
+                              					created a new story 
+                            				<% elsif activity.key == "story.update" %>
+                              					joined the story 
+                            				<% end %>
+                            				<%= link_to activity.trackable.title, edit_story_path(activity.trackable) %> - <%= activity.created_at.strftime("%m/%d/%Y") %>   
+                        			<% end %>
+                          		<% elsif activity.trackable_type == "Micropost"%>
+                            		<% if current_user.following?(activity.owner) || (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) || current_user == activity.owner %>
+                              			<div class="activity">
+            	                			<% if activity.owner.name == current_user.name %>
+                                  				<%= link_to "You", activity.owner %>
+                                			<% else %>
+                                  				<%= link_to activity.owner.name, activity.owner if activity.owner %>
+                                			<% end %>
+                                			added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %> - <%= activity.created_at.strftime("%m/%d/%Y") %> 
+                           			<% end %>        
+                           		<% else %>
+                            		which has since been removed 
+                           		<% end %>
+                         		</div>
+                       			<% count2 = count2 + 1 %>
+                       		<% end %>
+                  		</tbody>
+                	</table>
+              	</div>
+			</div>
+			<div class="tab-pane" id="edit">
+            	<%= form_for @user, :html => {:multipart => true} do |f| %>
+				<%= render 'shared/error_messages', object: f.object %>
+                <div class="form-group">        
+                	<div class="col-xs-6">
+                		<label for="username"><h4>Username</h4></label>
+                        <%= f.text_field :name, :class => "form-control" %>
+                    </div>
+                </div>
+                
+                <div class="form-group">          
+                	<div class="col-xs-6">
+                    	<label for="email"><h4>Email</h4></label>
+                        <%= f.text_field :email, :class => "form-control" %>
+                    </div>
+                </div>
+                
+                <div class="form-group">         
+                	<div class="col-xs-6">
+                    	<label for="password"><h4>Password</h4></label>
+                        <%= f.password_field :password, :class => "form-control" %>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                	<div class="col-xs-6">
+                    	<label for="verify"><h4>Verify</h4></label>
+                        <%= f.password_field :password_confirmation, :class => "form-control" %>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                	<div class="col-xs-6">
+                    	<label for="profile_picture"><h4>Profile Picture</h4></label>
+                        <%= f.file_field :image, :class => "form-content" %>
+                    </div>
+                </div>
+                
+                <div class="form-group">          
+               		<div class="col-xs-6">
+                    	<label for="banner"><h4>Banner</h4></label>
+                        <%= f.file_field :banner, :class => "form-content" %>
+                    </div>
+                </div>
+                
+                <div class="form-group">         
+                	<div class="col-xs-6">
+                		<label for="Bio"><h4>Bio</h4></label>
+                    	<%= f.text_area :aboutme, :cols => 50, :rows => 3, placeholder:  "About Me" %>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                	<div class="col-xs-12">
+                    	<br>
+                        <br><%= f.submit "Update Profile", class: "btn btn-lg btn-success" %>
+                        <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                    </div>
+                </div>
+                <br/><br/>
+            	<% end %>
+            </div>
+		</div>
+	</div><!--/col-9-->
+</div><!--/row-->
