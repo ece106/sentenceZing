@@ -6,8 +6,9 @@
 	</div>
 </center>
  
-<% if current_user.id == @story.user_id || current_user.id == @story.user2id || @story.user2id == 0 %>
-	<% if current_user.id != @story.turn %>
+<% if @story.user2id > 0 %>
+  <% if current_user.id == @story.user_id || current_user.id == @story.user2id || @story.user2id == 0 %>
+	  <% if current_user.id != @story.turn %>
     	<%= form_for(@micropost) do |f| %>
         	<%= render 'shared/error_messages', object: f.object %>
         	<%= f.hidden_field :story_id %>
@@ -23,6 +24,7 @@
             		<%= f.submit "Post", class: "btn btn-large btn-primary" %>
       			</div>
       		</center>
-      	<% end %>
+      <% end %>
     <% end %>
+  <% end %>
 <% end %>
