@@ -49,7 +49,7 @@
           <ul class="nav nav-tabs" id="myTab">
             <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
             <% if current_user.name == @user.name %>
-            	<!-- ><li><a href="#messages" data-toggle="tab">Messages</a></li> -->
+            	<li><a href="#messages" data-toggle="tab">Messages</a></li>
             	<li><a href="#activity" data-toggle="tab">Activity</a></li>
             	<li><a href="#edit" data-toggle="tab">Edit</a></li>
             <% end %>
@@ -103,7 +103,8 @@
 					</div>
 					<div class="tab-pane" id="messages">
 						<h2>Messages</h2>
-               
+               			<p>No messages</p>
+               			<!--
                			<ul class="list-group">
                   			<li class="list-group-item text-muted">Inbox</li>
                   			<li class="list-group-item text-right"><a href="#" class="pull-left">Here is your a link to the latest summary report from the..</a> 2.13.2014</li>
@@ -114,7 +115,7 @@
                   			<li class="list-group-item text-right"><a href="#" class="pull-left">For therepien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
                   			<li class="list-group-item text-right"><a href="#" class="pull-left">Also we, havesapien massaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
                   			<li class="list-group-item text-right"><a href="#" class="pull-left">Swedish chef is assaortor. A lobortis vitae, condimentum justo...</a> 2.11.2014</li>
-                  
+                  		-->
                 		</ul> 
 					</div>
 					<div class="tab-pane" id="activity">
