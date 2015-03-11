@@ -5,7 +5,7 @@
       			<h1><%= @story.title %></h1>
       			<h2><%= @story.category %></h2>
       			by <%= User.find(@story.user_id).name %>
-      			<% if @story.user2id != nil %>
+      			<% if @story.user2id != nil && @story.user2id != 0 %>
         			and <%= User.find(@story.user2id).name %>
       			<% end %>
       			<br/><br/>
