@@ -36,33 +36,41 @@
                     </a>
                     <ul class="dropdown-menu" style="width:450px">
                         <% counter = 0 %>
-                        <div>
-                            <% @activities.each do |activity| %>
-                                <% if activity.trackable_type == "Micropost"%>
-                                
-                                    <% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
-                                        <% counter = counter + 1 %>
-                                        
-                                        <% if activity.id > @lastSeenActivity %>
-                                            <% @lastSeenActivity = activity.id %>
-                                            <% current_user.update_attribute(:last_seen, @lastSeenActivity) %>
-                                        <% end %>
-                                        <li>
-                                        &nbsp;&nbsp;
-                                        <%= link_to activity.owner.name, activity.owner if activity.owner %>
-                                        added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %>
-                                        <br/><hr noshade>
-                                    <% end %>
-                                    
-                                <% end %>
-                                </li>
-                                <% if counter == 8 %>
-                                    <% break %>
-                                <% end %>
-                                
-                            <% end %>
-                            <br/>
-                            <li><%= link_to "See All", activities_path %></li>
+                        <div class="table-responsive" >
+							<table class="table table-hover" >
+								<tbody id="items">
+                            		<% @activities.each do |activity| %>
+                                		<% if activity.trackable_type == "Micropost"%>
+                                    		<% if (current_user.id == Story.find_by_id(activity.trackable.story_id).user_id  || current_user.id == Story.find_by_id(activity.trackable.story_id).user2id) && current_user != activity.owner %>
+                                        		<% counter = counter + 1 %>
+                                        		<tr>
+                            						<td>
+                            							<center>
+                                        				<% if activity.id > @lastSeenActivity %>
+                                            				<% @lastSeenActivity = activity.id %>
+                                            				<% current_user.update_attribute(:last_seen, @lastSeenActivity) %>
+                                        				<% end %>
+                                        				<li>
+                                        				&nbsp;&nbsp;
+                                        				<%= link_to activity.owner.name, activity.owner if activity.owner %>
+                                        				added a sentence to <%= link_to Story.find_by_id(activity.trackable.story_id).title, edit_story_path(activity.trackable.story_id) %>
+                                    					</center>
+                                    				</td>
+                                    			</tr>
+                                    		<% end %>
+                                    	<% end %>
+                                		</li>
+                                		<% if counter == 8 %>
+                                    		<% break %>
+                                		<% end %>
+                                	<% end %>
+                                	<tr>
+                            			<td>
+                            				<center><%= link_to "See All", activities_path %></center>
+                            			</td>
+                            		</tr>
+                            	</tbody>
+                            </table>
                         </div>
                     </ul>
                     </li>
