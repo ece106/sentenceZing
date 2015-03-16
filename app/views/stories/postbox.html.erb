@@ -6,7 +6,7 @@
 	</div>
 </center>
  
-<% if @story.user2id > 0 %>
+<% if @story.user2id %>
   <% if current_user.id == @story.user_id || current_user.id == @story.user2id || @story.user2id == 0 %>
 	  <% if current_user.id != @story.turn %>
     	<%= form_for(@micropost) do |f| %>
