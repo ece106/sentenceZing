@@ -1,21 +1,54 @@
+
 <h1> Conversations </h1>
 
-<h2> Inbox </h2>
-<ul> <%= render collection: mailbox.inbox, partial: 'conversation' %><br/> </ul>
-<br/>
-
-<h2> Sentbox </h2>
-<ul> <%= render collection: mailbox.sentbox, partial: 'conversation' %><br/> </ul>
-<br/>
-
-<h2> Trash </h2>
-<ul> <%= render collection: mailbox.trash, partial: 'conversation' %><br/> </ul>
-<br/>
-
 <%= link_to 'Start Conversation', :new_conversation %>
+
+<br/>
+
+<ul class="nav nav-tabs" id="myTab">
+   <li class="active"><a href="#inbox" data-toggle="tab">Inbox</a></li>
+   <li><a href="#sent" data-toggle="tab">Sent</a></li>
+   <li><a href="#trash" data-toggle="tab">Trash</a></li>
+</ul>
+
+<div class="tab-content">
+	<div class="tab-content">
+		<div class="tab-pane active" id="inbox">
+			<h2> Inbox </h2>
+<div class="table-responsive" >
+	<table class="table table-hover" >
+		<tbody id="items">
+			<%= render collection: mailbox.inbox, partial: 'conversation' %>
+    	</tbody>
+    </table>
+</div>
+			</div>
+
+
+
+		<div class="tab-pane" id="sent">
+<h2> Sentbox </h2>
+<div class="table-responsive" >
+	<table class="table table-hover" >
+		<tbody id="items">
+<%= render collection: mailbox.sentbox, partial: 'conversation' %>
+    	</tbody>
+    </table>
+</div>
+			</div>
+			
+			
+		<div class="tab-pane" id="trash">
+<h2> Trash </h2>
+<div class="table-responsive" >
+	<table class="table table-hover" >
+		<tbody id="items">
+<%= render collection: mailbox.trash, partial: 'conversation' %>
+    	</tbody>
+    </table>
+</div>
+				</div>
+			</div>
+		</div>
+
 <br/><br/>
-
-
-
-
-
