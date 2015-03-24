@@ -1,4 +1,5 @@
 class ConversationsController < ApplicationController
+    layout :resolve_layout
     helper_method :mailbox, :conversation
 
     def create
@@ -51,6 +52,17 @@ class ConversationsController < ApplicationController
                 when 1 then self[subkeys.first]
             else subkeys.map{|k| self[k] }
             end
+        end
+    end
+    
+    def resolve_layout
+        case action_name
+            when 'new'
+            'emptyshow'
+            when 'show'
+            'emptyshow'
+        else
+            'application'
         end
     end
     
