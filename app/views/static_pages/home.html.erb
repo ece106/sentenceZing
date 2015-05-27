@@ -1,26 +1,45 @@
+<p>SentenceZing is a suite of word games. We currently have two games to try out: StoryPair and CardHazzard
 <p>
-	Join others in a new interactive and fun way to create a short story with a partner.<br/> 
-	Make a story or join an existing one to find a partner to get started! <br/> 
-	Read other user's stories and vote on your favorites to make them the top story of the week! <br/> 
-	Your imagination is the only limit! 
-</p>
-           
-<% if signed_in? %>
-  	<div class="row">
+<div class="row">
+  <div class="col-md-6 col-xs-12 " >
+    <h3>STORYPAIR </h3>
+      <div style="text-align: left" >
+	    * Join others in a new interactive and fun way to create a short story with a partner.<br/> 
+	    * Make a story or join an existing one to find a partner to get started! <br/> 
+	    * Read other user's stories and vote on your favorites to make them the top story of the week! <br/> 
+  	  </div>
+      Your imagination is the only limit!  
+    </p>
+
+    <% if signed_in? %>
   		<%= link_to "Learn How to Play!", howtoplay_path, class: "btn btn-default" %>
   		&nbsp;
     	<%= link_to "Start a Story!", new_story_path, class: "btn btn-default" %>
     	&nbsp;
     	<%= link_to "Join or Read a Story!", stories_path, class: "btn btn-default" %>
-  	</div>
-<% else %>
-  	<div class="center hero-unit">
+    <% else %>
+      <div class="center hero-unit">
     	<%= link_to"Sign up now!", signup_path, class: "btn btn-default" %>
     	<%= link_to "Sign in!", signin_path, class: "btn btn-default" %>
-  	</div>
-<% end %>
+  	  </div>
+    <% end %>
+  </div>
+  <div class="col-md-6 col-xs-12 " >
+    <h3>CARDHAZZARD</h3>
+	Join others in a new interactive and fun way to create a short story with a partner.</p> 
+    <% if signed_in? %>
+      <%= link_to "Start a game!", "http://sentencezingaling.herokuapp.com", class: "btn btn-default" %>
+    <% else %>
+      <div class="center hero-unit">
+    	<%= link_to"Sign up now!", signup_path, class: "btn btn-default" %>
+    	<%= link_to "Sign in!", signin_path, class: "btn btn-default" %>
+  	  </div>
+    <% end %>
+  </div>
+</div>
 
-<table>
+<br><br>
+  <table>
 	<th colspan="4"><center><h3>SentenceZing Early Backer Bundles</h3></center></th>
 	<tr>
 		<td colspan="4">
@@ -63,9 +82,9 @@
 			</p>
 		</td>
 	</tr>
-</table>
-<hr>
-<table>
+  </table>
+  <hr>
+  <table>
 	<tr>
 		<td width="50px"></td>
 		<td width="100px">
@@ -97,7 +116,7 @@
 			</p>
 		</td>
 	</tr>
-</table>
+  </table>
 
 <br/><br/>
 

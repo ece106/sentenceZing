@@ -225,6 +225,45 @@ M: Format conversations
 L: Twitter marketing
 L: Write About section, How Help, Who we are
 
+Wed May 6
+M: Modify obvious variables in NodeJS for sentencezingaling
+M: Modify easier pieces of NodeJS to emulate sentencezing design
+L: Create new lines for Cards A Humanity card text
+L: Create pictures for Pictionary A Humanity
+
+Tue May 19
+L: TOS for suggested cards
+M: List of code improvements
+1.  Running out of cards - More cards or push back into array of whitecards
+2.  People's answers always in the same order - put in array and select random number to display.
+3.  No timeout when selecting - Add timeout of some value
+4.  Better way of adding a name - make required field
+5.  Add button to leave game - remove player from game and then put game back on available list
+6.  Allow for variable number of players - start with less than 4 and allow more than 4
+7.  add live chat
+8.  implement sessions for users
+9.  Make more cards
+10. Implement consistent design layout
+11. When user quits game reduce number of people waiting for round progress
+12. Host can kick people
+13. Allow users to suggest cards. Create ToS.
+
+
+Anvil of Doom
+Carnival in Coal
+Death Breath
+Defeated Sanity
+Inactive Messiah
+Infernal Method
+Job for a Cowboy
+Molotov Solution
+My grain headache
+Obscene Eulogy
+Swallow the Sun
+Awkward puppy
+Serious George
+
+
 
 January
 Plan & write most of the video
